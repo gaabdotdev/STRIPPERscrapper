@@ -8,6 +8,7 @@ import {
   ensureAuthenticated,
   safeDirName,
   gotoUrl,
+  envTrim,
 } from '../utils/infnetShared.mjs';
 import {
   stableTranscriptItemId,
@@ -194,8 +195,8 @@ async function extractLessonItemsFromPage(page) {
 export async function discoverLessonTasks(ctx) {
   const { page } = ctx;
   const classesUrl = process.env.CLASSES_URL || DEFAULT_CLASSES_URL;
-  const user = process.env.FACULDADE_USER || '';
-  const pass = process.env.FACULDADE_PASS || '';
+  const user = envTrim('FACULDADE_USER');
+  const pass = envTrim('FACULDADE_PASS');
   const sessionPath = path.join(projectRoot, 'session.json');
 
   await ensureAuthenticated(page, classesUrl, sessionPath, user, pass, {
@@ -410,8 +411,8 @@ export async function runLessonScraper(ctx, scraperOpts = {}) {
   const { log, error } = makeTaggedLoggers(scraperOpts.logTag);
   const progress = scraperOpts.progress || null;
   const classesUrl = process.env.CLASSES_URL || DEFAULT_CLASSES_URL;
-  const user = process.env.FACULDADE_USER || '';
-  const pass = process.env.FACULDADE_PASS || '';
+  const user = envTrim('FACULDADE_USER');
+  const pass = envTrim('FACULDADE_PASS');
   const sessionPath = path.join(projectRoot, 'session.json');
   const downloadsDir = path.join(projectRoot, 'downloads');
   const tempDownloads =

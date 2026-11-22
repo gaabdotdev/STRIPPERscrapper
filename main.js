@@ -6,6 +6,10 @@ import path from 'path';
 import { Command } from 'commander';
 import chalk from 'chalk';
 import { launchBrowser } from './src/utils/browser.mjs';
+import {
+  captchaGateEnabledFromEnv,
+  runCaptchaGate,
+} from './src/utils/captchaGate.mjs';
 import { logSectionBanner } from './src/utils/logging.mjs';
 import { ensureDir, projectRoot } from './src/utils/infnetShared.mjs';
 import { partitionTasksForWorker } from './src/utils/shard.mjs';
@@ -21,6 +25,10 @@ import {
   runDocumentScraper,
   discoverDocumentTasks,
 } from './src/scrapers/documentScraper.js';
+import {
+  extractDocumentsZips,
+  extractZipsEnabledFromEnv,
+} from './src/utils/extractDocumentsZip.mjs';
 import { isItemCompleted, resolveManifestRootAndPath } from './src/utils/downloadManifest.mjs';
 
 function hasHeadedFlag() {
@@ -105,6 +113,30 @@ async function filterPendingDocTasks(tasks, outputDir) {
   return out;
 }
 
+/**
+ * Após scrape de documentos: extrai `.zip` em downloads/documents.
+ * @param {{ runD: boolean; dryRun: boolean; noExtractZips: boolean }} p
+ * @returns {Promise<boolean>}
+ */
+async function runDocumentsPostPipeline(p) {
+  const { runD, dryRun, noExtractZips } = p;
+  if (!runD || dryRun || noExtractZips || !extractZipsEnabledFromEnv()) {
+    return true;
+  }
+  console.log('\n[ORQUESTRADOR] Descompactar ZIPs em downloads/documents…');
+  try {
+    const result = await extractDocumentsZips();
+    if (result.errors > 0) return false;
+    return true;
+  } catch (e) {
+    console.error(
+      '[ORQUESTRADOR] Erro ao extrair ZIPs:',
+      e instanceof Error ? e.message : e
+    );
+    return false;
+  }
+}
+
 async function main() {
   const program = new Command();
   program
@@ -125,6 +157,14 @@ async function main() {
       '--sequential',
       'Forçar um único browser (sem sharding paralelo), comportamento clássico'
     )
+    .option(
+      '--no-captcha-gate',
+      'Saltar portão de captcha manual (browser visível antes do scrape)'
+    )
+    .option(
+      '--no-extract-zips',
+      'Não descompactar .zip em downloads/documents após documentos'
+    )
     .allowUnknownOption()
     .parse();
 
@@ -138,6 +178,13 @@ async function main() {
   }
 
   const headed = hasHeadedFlag();
+  const captchaGate = captchaGateEnabledFromEnv() && !Boolean(o.noCaptchaGate);
+  const launchScrapeBrowser = (extra = {}) =>
+    launchBrowser({
+      headed,
+      forceHeadless: captchaGate && !headed,
+      ...extra,
+    });
   const failFast = Boolean(o.failFast) || envFailFast();
   const workersRaw = Number(o.workers);
   const workers =
@@ -150,6 +197,19 @@ async function main() {
   const docArgs = parseDocumentArgs();
   const downloadsDir = path.join(projectRoot, 'downloads');
 
+  if (captchaGate) {
+    try {
+      await runCaptchaGate();
+    } catch (e) {
+      console.error(
+        '[CAPTCHA]',
+        e instanceof Error ? e.message : e
+      );
+      process.exitCode = 1;
+      return;
+    }
+  }
+
   const useCluster =
     !sequential &&
     !noDownload &&
@@ -157,17 +217,66 @@ async function main() {
     workers >= 2 &&
     (runL || runD);
 
+  let scrapeOk = true;
+
   if (!useCluster) {
-    await runSequentialOrchestrator({
+    scrapeOk = await runSequentialOrchestrator({
       runL,
       runD,
       headed,
+      launchScrapeBrowser,
       failFast,
       dashboardEnabled: canDashboard,
       downloadsDir,
     });
-    return;
+  } else {
+    scrapeOk = await runClusterOrchestrator({
+      runL,
+      runD,
+      launchScrapeBrowser,
+      failFast,
+      workers,
+      canDashboard,
+      downloadsDir,
+      lessonLimit,
+    });
   }
+
+  const zipOk = await runDocumentsPostPipeline({
+    runD,
+    dryRun: docArgs.dryRun,
+    noExtractZips: Boolean(o.noExtractZips),
+  });
+
+  if (!scrapeOk || !zipOk) {
+    process.exitCode = 1;
+  }
+}
+
+/**
+ * @param {{
+ *   runL: boolean;
+ *   runD: boolean;
+ *   launchScrapeBrowser: (extra?: object) => Promise<import('puppeteer').Browser>;
+ *   failFast: boolean;
+ *   workers: number;
+ *   canDashboard: boolean;
+ *   downloadsDir: string;
+ *   lessonLimit: number;
+ * }} p
+ * @returns {Promise<boolean>}
+ */
+async function runClusterOrchestrator(p) {
+  const {
+    runL,
+    runD,
+    launchScrapeBrowser,
+    failFast,
+    workers,
+    canDashboard,
+    downloadsDir,
+    lessonLimit,
+  } = p;
 
   const mapTag = chalk.bold.magenta('[ORQUESTRADOR][MAPA]');
   console.log(
@@ -179,10 +288,9 @@ async function main() {
 
   let mapBrowser;
   try {
-    mapBrowser = await launchBrowser({ headed });
+    mapBrowser = await launchScrapeBrowser();
   } catch {
-    process.exit(1);
-    return;
+    return false;
   }
 
   const mapPage = await mapBrowser.newPage();
@@ -226,7 +334,6 @@ async function main() {
   const totalDomItems = discoveredLessons.tasks.length;
   const courseName = discoveredLessons.courseName || '';
 
-  const workerHeaded = headed;
   const workerSlots = Array.from({ length: workers }, (_, w) => w);
 
   const totalItems = pendingLessons.length + pendingDocs.length;
@@ -254,8 +361,7 @@ async function main() {
       let browser;
       try {
         dashboard.setWorkerStatus(wid, 'A iniciar browser…');
-        browser = await launchBrowser({
-          headed: workerHeaded,
+        browser = await launchScrapeBrowser({
           preferHeadlessUnlessHeaded: true,
         });
       } catch {
@@ -352,7 +458,6 @@ async function main() {
   );
 
   const failed = results.filter((r) => r.lessonError || r.docError);
-  const okCount = results.filter((r) => r.ok).length;
   const clusterOk = !(failed.length || results.some((r) => r.skipped));
   restoreConsole();
   dashboard.finalizeAndPrintSummary({
@@ -362,9 +467,7 @@ async function main() {
     workers,
   });
 
-  if (!clusterOk) {
-    process.exitCode = 1;
-  }
+  return clusterOk;
 }
 
 /**
@@ -372,13 +475,15 @@ async function main() {
  *   runL: boolean;
  *   runD: boolean;
  *   headed: boolean;
+ *   launchScrapeBrowser: (extra?: object) => Promise<import('puppeteer').Browser>;
  *   failFast: boolean;
  *   dashboardEnabled: boolean;
  *   downloadsDir: string;
  * }} p
+ * @returns {Promise<boolean>}
  */
 async function runSequentialOrchestrator(p) {
-  const { runL, runD, headed, failFast, dashboardEnabled, downloadsDir } = p;
+  const { runL, runD, launchScrapeBrowser, failFast, dashboardEnabled, downloadsDir } = p;
   const dashboard = createDashboard({
     enabled: dashboardEnabled,
     title: 'StripperScrapper — Dashboard',
@@ -390,10 +495,9 @@ async function runSequentialOrchestrator(p) {
   let browser;
   try {
     dashboard.setWorkerStatus(1, 'A iniciar browser…');
-    browser = await launchBrowser({ headed });
+    browser = await launchScrapeBrowser();
   } catch {
-    process.exit(1);
-    return;
+    return false;
   }
 
   const page = await browser.newPage();
@@ -424,7 +528,6 @@ async function runSequentialOrchestrator(p) {
         dashboard.setWorkerStatus(1, 'AULAS: erro');
         if (failFast) {
           console.error('[ORQUESTRADOR] fail-fast: a saltar documentos.');
-          return;
         }
       }
     }
@@ -462,7 +565,7 @@ async function runSequentialOrchestrator(p) {
     workers: 1,
   });
 
-  if (moduleFailed) process.exitCode = 1;
+  return !moduleFailed;
 }
 
 main().catch((e) => {

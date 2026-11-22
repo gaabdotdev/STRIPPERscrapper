@@ -18,6 +18,7 @@ import {
   safeDirName,
   safeFileName,
   inferDocumentsUrlFromGruposUrl,
+  envTrim,
 } from '../utils/infnetShared.mjs';
 import {
   stableDocumentItemId,
@@ -64,6 +65,21 @@ const DEFAULT_EXTENSIONS = new Set([
   'epub',
   'ipynb',
 ]);
+
+/** Limite por ficheiro (20 GiB) — antes 500 MiB; ajustável via DOCUMENTS_MAX_BYTES. */
+const DEFAULT_DOCUMENTS_MAX_BYTES = 20 * 1024 * 1024 * 1024;
+/** Timeout de fetch para downloads grandes (2 h); ajustável via DOCUMENTS_FETCH_TIMEOUT_MS. */
+const DEFAULT_DOCUMENTS_FETCH_TIMEOUT_MS = 2 * 60 * 60 * 1000;
+
+function resolveDocumentsMaxBytes() {
+  const n = Number(process.env.DOCUMENTS_MAX_BYTES);
+  return Number.isFinite(n) && n > 0 ? n : DEFAULT_DOCUMENTS_MAX_BYTES;
+}
+
+function resolveDocumentsFetchTimeoutMs() {
+  const n = Number(process.env.DOCUMENTS_FETCH_TIMEOUT_MS);
+  return Number.isFinite(n) && n > 0 ? n : DEFAULT_DOCUMENTS_FETCH_TIMEOUT_MS;
+}
 
 /** Evita repetir o mesmo log quando `parseDocumentArgs` é chamado várias vezes no mesmo processo. */
 let loggedDocumentsUrlInference = false;
@@ -276,7 +292,10 @@ async function downloadBinaryWithSession(page, fileUrl, destPath, opts) {
   const cookie = await buildCookieHeader(page);
   const ua = await page.evaluate(() => navigator.userAgent);
   const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), opts.fetchTimeoutMs || 300000);
+  const timer = setTimeout(
+    () => controller.abort(),
+    opts.fetchTimeoutMs || DEFAULT_DOCUMENTS_FETCH_TIMEOUT_MS
+  );
   try {
     const res = await fetch(fileUrl, {
       method: 'GET',
@@ -426,8 +445,8 @@ async function collectDocumentTasksFromSite(page, cfg) {
 export async function discoverDocumentTasks(ctx) {
   const { page } = ctx;
   const { documentsUrl, outputDir, maxDepth, extensions } = parseDocumentArgs();
-  const user = process.env.FACULDADE_USER || '';
-  const pass = process.env.FACULDADE_PASS || '';
+  const user = envTrim('FACULDADE_USER');
+  const pass = envTrim('FACULDADE_PASS');
   const sessionPath = path.join(projectRoot, 'session.json');
 
   page.setDefaultNavigationTimeout(120000);
@@ -457,12 +476,11 @@ export async function runDocumentScraper(ctx, scraperOpts = {}) {
   const { log, error, warn } = makeTaggedLoggers(scraperOpts.logTag);
   const progress = scraperOpts.progress || null;
 
-  const user = process.env.FACULDADE_USER || '';
-  const pass = process.env.FACULDADE_PASS || '';
+  const user = envTrim('FACULDADE_USER');
+  const pass = envTrim('FACULDADE_PASS');
   const sessionPath = path.join(projectRoot, 'session.json');
-  const maxBytes =
-    Number(process.env.DOCUMENTS_MAX_BYTES || 500 * 1024 * 1024) || 500 * 1024 * 1024;
-  const fetchTimeoutMs = Number(process.env.DOCUMENTS_FETCH_TIMEOUT_MS || 300000) || 300000;
+  const maxBytes = resolveDocumentsMaxBytes();
+  const fetchTimeoutMs = resolveDocumentsFetchTimeoutMs();
 
   if (!documentsUrl.includes('/documents')) {
     warn('[AVISO] URL não contém /documents — confirme DOCUMENTS_URL / --documents-url=');

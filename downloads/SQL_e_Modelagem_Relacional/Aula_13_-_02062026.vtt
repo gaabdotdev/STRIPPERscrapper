@@ -1,0 +1,3010 @@
+WEBVTT
+
+1
+00:00:09.920 --> 00:00:11.010
+Kadu Gertners: Turma.
+
+2
+00:00:11.140 --> 00:00:17.010
+Kadu Gertners: Excelente noite para vocês. Tudo bem, pessoal? Tranquilo.
+
+3
+00:00:17.270 --> 00:00:19.730
+helio.oliveira: Boa noite, Professor. Tudo, Joia.
+
+4
+00:00:19.730 --> 00:00:22.230
+Kadu Gertners: Lente e noite. Maravilha.
+
+5
+00:00:22.800 --> 00:00:28.640
+Kadu Gertners: Excelente noite, Nelson. Excelente noite, Hélio. Maravilha. Excelente noite, Gabriel Silva.
+
+6
+00:00:29.870 --> 00:00:33.250
+Kadu Gertners: Excelente noite, Lucas. Excelente noite, Matheus.
+
+7
+00:00:33.510 --> 00:00:36.130
+Kadu Gertners: Maravilha. Excelente noite, Alan.
+
+8
+00:00:37.560 --> 00:00:39.380
+Kadu Gertners: Pessoal, vamos lá.
+
+9
+00:00:39.570 --> 00:00:40.750
+Kadu Gertners: Olha só.
+
+10
+00:00:41.050 --> 00:00:43.040
+Kadu Gertners: É bom.
+
+11
+00:00:44.240 --> 00:00:47.350
+Kadu Gertners: Deixa eu começar pelo seguinte.
+
+12
+00:00:47.550 --> 00:00:53.610
+Kadu Gertners: Temos que falar alguns pontos importantes antes que eu esqueça.
+
+13
+00:00:53.870 --> 00:01:05.000
+Kadu Gertners: E vamos aí botar a nossa aula aí para frente. Em primeiro lugar. Hoje, pessoal, é a oitava semana. Começamos a oitava semana de aula,
+
+14
+00:01:05.080 --> 00:01:16.629
+Kadu Gertners: a oitava semana ou a oitava etapa de aula. E nós agora, hoje, turma, vamos ver um pouquinho aí
+
+15
+00:01:16.750 --> 00:01:20.380
+Kadu Gertners: a parte de fazer a ligação
+
+16
+00:01:20.460 --> 00:01:33.400
+Kadu Gertners: efetivamente de uma tabela com a outra tabela. Então, a partir de hoje e na semana que vem, nós vamos realmente entrar nessa análise.
+
+17
+00:01:33.410 --> 00:01:41.620
+Kadu Gertners: Vamos dar uma olhada nisso. Vamos executar alguns comandos aí para vocês entenderem. Começar a entender um pouquinho melhor. Isso aí.
+
+18
+00:01:41.840 --> 00:01:55.250
+Kadu Gertners: Tá legal. O grande, realmente segredo dos modelos relacionais. Só para nós lembrarmos um pouquinho. É exatamente esse vínculo, essa facilidade de ter
+
+19
+00:01:55.250 --> 00:02:03.679
+Kadu Gertners: a chave primária de uma tabela conversando com a chave estrangeira da outra tabela. Tá legal. Excelente noite, Eduardo. Ribeiro.
+
+20
+00:02:03.720 --> 00:02:08.450
+Kadu Gertners: Bom, então o que acontece, galera? Agora nós temos que lembrar de uma coisa.
+
+21
+00:02:08.800 --> 00:02:16.440
+Kadu Gertners: Quinta feira. Nós não teremos aula. Por quê? Porque quinta feira será feriado nacional.
+
+22
+00:02:16.760 --> 00:02:26.459
+Kadu Gertners: Então a ideia, turma, hoje é eu tentar passar a matéria toda para vocês da etapa oito.
+
+23
+00:02:26.620 --> 00:02:28.649
+Kadu Gertners: Então é isso que eu vou tentar fazer
+
+24
+00:02:28.960 --> 00:02:37.240
+Kadu Gertners: a aula será prática hoje prática. Então eu vou tentar passar essa matéria para vocês hoje, porque
+
+25
+00:02:37.510 --> 00:02:41.330
+Kadu Gertners: é importante para vocês avançarem com o estudo de vocês.
+
+26
+00:02:41.960 --> 00:02:44.750
+Kadu Gertners: Agora, galera tem dois pontos aí
+
+27
+00:02:44.930 --> 00:02:50.329
+Kadu Gertners: que me deixaram pensativos aí. E nós temos que falar sobre isso.
+
+28
+00:02:50.490 --> 00:03:01.829
+Kadu Gertners: Primeiro, eu não consegui finalizar aquela aula que juntos nós fizemos aí na quinta feira. Eu não esqueci disso.
+
+29
+00:03:01.940 --> 00:03:17.619
+Kadu Gertners: Não esqueci. Mas eu acredito que hoje nós não vamos conseguir botar isso para frente. E como quinta feira será feriado. Então essa semana nós não vamos conseguir provavelmente pegar nisso.
+
+30
+00:03:17.980 --> 00:03:25.120
+Kadu Gertners: Então a ideia é que eu volte a pegar nisso, ou na semana que vem,
+
+31
+00:03:25.320 --> 00:03:30.930
+Kadu Gertners: que será a nona semana de aula, a nona etapa de aula,
+
+32
+00:03:31.200 --> 00:03:46.050
+Kadu Gertners: ou ainda na outra semana, quando aí já vai ter acabado a parte de passar matéria para vocês. E vocês vão estar preocupados em fazer o ate da nossa disciplina,
+
+33
+00:03:46.050 --> 00:03:55.169
+Kadu Gertners: fazer o At de Python e fazer o trabalho da entrega do trabalho da disciplina de projeto.
+
+34
+00:03:55.510 --> 00:04:03.310
+Kadu Gertners: Então nós vamos juntos analisar. Vamos ver como é que nós vamos conseguir fazer isso.
+
+35
+00:04:03.680 --> 00:04:05.219
+Kadu Gertners: Esse é o primeiro ponto,
+
+36
+00:04:05.570 --> 00:04:13.699
+Kadu Gertners: galera. O segundo ponto foi um ponto que realmente também me deixou pensativo. E até por causa do prazo.
+
+37
+00:04:13.970 --> 00:04:19.479
+Kadu Gertners: Pelo que eu vi, deixe me confirmar aqui, rapidinho.
+
+38
+00:04:19.940 --> 00:04:22.270
+Kadu Gertners: Eu fiz essa anotação. Aqui
+
+39
+00:04:23.320 --> 00:04:39.990
+Kadu Gertners: é o que acontece, turma, hoje é dia dois de junho de dois mil e vinte e seis. Então, se nós fizermos assim dois mais sete, que será a próxima terça, dois mais sete já dão nove.
+
+40
+00:04:40.230 --> 00:04:42.039
+Kadu Gertners: Então, nove de Junho.
+
+41
+00:04:42.120 --> 00:04:52.939
+Kadu Gertners: Então a minha ideia era que eu passasse para vocês hoje. Mesmo que nós acabássemos a aula mais tarde, o At,
+
+42
+00:04:53.000 --> 00:05:11.160
+Kadu Gertners: o At da nossa disciplina. Só pessoal, que eu vou pedir formalmente aqui. Desculpa para vocês, porque ainda não foi disponibilizado o At. Porque tinham que ser feitos realmente alguns acertos e não deu tempo de disponibilizar o At.
+
+43
+00:05:11.420 --> 00:05:14.569
+Kadu Gertners: Então, o que vai acontecer com isso?
+
+44
+00:05:14.800 --> 00:05:23.709
+Kadu Gertners: Vai acontecer que provavelmente o At será disponibilizado na próxima terça, que será dia nove.
+
+45
+00:05:23.870 --> 00:05:29.540
+Kadu Gertners: E vocês teriam que entregar o At
+
+46
+00:05:30.000 --> 00:05:34.520
+Kadu Gertners: uma semana depois, que seria no dia dezasseis.
+
+47
+00:05:34.890 --> 00:05:38.629
+Kadu Gertners: Então, assim eu já estou realmente prevendo isso.
+
+48
+00:05:38.650 --> 00:05:56.549
+Kadu Gertners: E prevendo isso, eu já estou percebendo que eu vou ter que abrir aí mais uma semana para vocês fazerem o ate, porque assim o ate galera. Ele está trabalhoso. Ele não está pequeno. Vocês vão
+
+49
+00:05:56.780 --> 00:06:16.179
+Kadu Gertners: tem que estudar. Vocês vão ter que analisar muita coisa do At. Então, assim não tem jeito. Então, assim, sabendo como é que está o at sabendo que teve um atraso na disponibilização do At. Eu vou ter que flexibilizar isso para vocês.
+
+50
+00:06:16.610 --> 00:06:24.789
+Kadu Gertners: Tá legal. Nós relembramos isso sem falta na semana que vem. Eu não vou esquecer isso. É um ponto importante.
+
+51
+00:06:25.510 --> 00:06:39.270
+Kadu Gertners: Sim, Lucas. Gabriel, a entrega está para dia dezasseis de Junho de dois mil e vinte e seis. Mas é exatamente sobre isso que eu estou falando, Lucas. Eu vou flexibilizar isso aí.
+
+52
+00:06:39.440 --> 00:06:55.829
+Kadu Gertners: Isso aí vai ficar muito em cima para vocês entregarem. E galera de novo. Eu como. Eu falo para vocês. Eu sei que vocês têm a disciplina de Python, que é a disciplina considerada de algoritmo, que é o Python.
+
+53
+00:06:55.930 --> 00:06:58.080
+Kadu Gertners: Ok, Lucas.
+
+54
+00:06:58.340 --> 00:07:07.300
+Kadu Gertners: De nada. Pedro. E a disciplina de Python é considerada muito pesada.
+
+55
+00:07:07.310 --> 00:07:21.159
+Kadu Gertners: E eu tenho certeza que o ate. Vocês vão ter que se esforçar bastante para fazer o ate da disciplina de Python. Então assim eu vou flexibilizar. Com certeza.
+
+56
+00:07:21.400 --> 00:07:27.130
+Kadu Gertners: Olha, vamos fazer o seguinte. Não vamos ficar nas palavras. Não, deixa eu pegar
+
+57
+00:07:27.230 --> 00:07:30.550
+Kadu Gertners: e tentar aqui. Deixa eu acessar rapidinho aqui.
+
+58
+00:07:32.750 --> 00:07:35.979
+Kadu Gertners: Espera aí. Deixa eu ver uma coisa aqui um minuto, por favor.
+
+59
+00:07:38.820 --> 00:07:41.160
+Kadu Gertners: Ah, não. Já vamos botar direto lá.
+
+60
+00:07:41.560 --> 00:07:42.450
+Kadu Gertners: E aí?
+
+61
+00:07:45.730 --> 00:07:48.079
+Kadu Gertners: Vamos lá. Deixa eu ver.
+
+62
+00:07:49.290 --> 00:08:07.630
+Kadu Gertners: Beleza é, tá aqui. Tal como vocês falaram. Já aí tá? De a dezasseis editar configurações,
+
+63
+00:08:09.770 --> 00:08:17.540
+Kadu Gertners: cara. Eu já vou botar logo para uma semana pra frente, tá? Então, ao invés de dia vinte, dezasseis,
+
+64
+00:08:17.650 --> 00:08:21.039
+Kadu Gertners: mais sete, ficará para dia vinte e três.
+
+65
+00:08:21.420 --> 00:08:22.400
+Kadu Gertners: Tá bom.
+
+66
+00:08:22.630 --> 00:08:25.080
+Kadu Gertners: Deixa eu pegar, atualizar aqui.
+
+67
+00:08:25.400 --> 00:08:36.390
+Kadu Gertners: Cadê bom para mim? Atualizou Lucas. Gabriel confirma para mim, amigão.
+
+68
+00:08:36.450 --> 00:08:51.919
+Kadu Gertners: Excelente noite. De nada. Beatriz Lucas, Gabriel, você que tá com a mão na massa. Aí dá uma atualizada na tua página aí para nós, amigão. E vê se para você. Foi mudada aí a data para dia vinte e três de junho atualizou, fechou.
+
+69
+00:08:51.930 --> 00:08:57.440
+Kadu Gertners: Então, galera, tá oficial aí tá? Obrigado, Lucas, pela confirmação.
+
+70
+00:08:57.500 --> 00:09:06.019
+Kadu Gertners: É confirmado. A entrega do nosso At será dia vinte e três de Junho.
+
+71
+00:09:06.070 --> 00:09:20.529
+Kadu Gertners: Tá legal? Então, não. De nada. Galera assim de novo. Eu acho que é bom senso. Eu tenho uma ideia. Um pouquinho das outras disciplinas. Então, assim, galera, eu sei que vocês vão ter que
+
+72
+00:09:20.820 --> 00:09:26.119
+Kadu Gertners: ralar aí firme. Então, galera, eu só peço para vocês o seguinte.
+
+73
+00:09:26.570 --> 00:09:39.160
+Kadu Gertners: Ok, Alan, ok, Pedro, se organizem a partir de hoje, comecem a se organizar. Porque, galera, vocês vão ter esses prazos. E lembrem se,
+
+74
+00:09:39.270 --> 00:09:43.420
+Kadu Gertners: no fim desse trimestre, finalizará O. Bloco.
+
+75
+00:09:43.790 --> 00:09:55.299
+Kadu Gertners: Então, não só sou eu, mas os outros dois professores precisarão acelerar as correções para eles entregarem, inclusive as notas de vocês.
+
+76
+00:09:55.720 --> 00:10:01.360
+Kadu Gertners: Então vai na minha, organizem se com carinho,
+
+77
+00:10:01.650 --> 00:10:06.330
+Kadu Gertners: ver como é que você vai estudar, vê se de repente
+
+78
+00:10:06.450 --> 00:10:10.190
+Kadu Gertners: você vai estudar com algum amigo ou amiga? Desculpe
+
+79
+00:10:10.520 --> 00:10:19.550
+Kadu Gertners: da sala. Se você vai tirar alguma dúvida, então se organizem, porque realmente será pesado.
+
+80
+00:10:20.140 --> 00:10:22.370
+Kadu Gertners: Tá? Espera aí. Só um minuto, pessoal.
+
+81
+00:10:27.160 --> 00:10:28.030
+Kadu Gertners: Bom
+
+82
+00:10:28.720 --> 00:10:41.330
+Kadu Gertners: dito isso, caduzão. Vamos lá. Vamos para a aula de hoje. Aí. Como é que será a aula de hoje? Então, galera, eu já disponibilizei o material. Deixa eu começar a compartilhar aqui o
+
+83
+00:10:41.610 --> 00:10:43.479
+Kadu Gertners: a tela com vocês.
+
+84
+00:10:44.030 --> 00:10:45.820
+Kadu Gertners: Agora vamos lá.
+
+85
+00:10:46.860 --> 00:10:47.810
+Kadu Gertners: E aí?
+
+86
+00:10:49.740 --> 00:10:59.640
+Kadu Gertners: Então, turma, eu vou aqui, deixe me acessar aqui o infinite online.
+
+87
+00:11:02.020 --> 00:11:07.470
+Kadu Gertners: Maravilha, deixe me.
+
+88
+00:11:08.650 --> 00:11:13.290
+Kadu Gertners: É só para vocês ficarem cientes, né?
+
+89
+00:11:15.110 --> 00:11:18.789
+Kadu Gertners: É, deixa eu ver se é essa?
+
+90
+00:11:18.890 --> 00:11:28.690
+Kadu Gertners: É essa mesmo. Ó aqui no infinite online, aqui na guia, documentações, documentos.
+
+91
+00:11:29.030 --> 00:11:36.190
+Kadu Gertners: Aqui Dade se do bloco nosso atual, fundamentos para o orçamento de dados, né? Ó,
+
+92
+00:11:36.310 --> 00:11:42.270
+Kadu Gertners: aqui na nossa pasta Sql. Modelagem relacional. Tá aqui.
+
+93
+00:11:42.590 --> 00:11:50.400
+Kadu Gertners: Estou entrando lá na pasta, beleza. E aí, aqui. Ó, tá o arquivinho no qual usaremos hoje.
+
+94
+00:11:50.630 --> 00:11:55.599
+Kadu Gertners: Tá legal esse arquivo aqui, ó o Sql. Modelagem relacional da etapa oito:
+
+95
+00:11:55.830 --> 00:12:02.480
+Kadu Gertners: Beleza Cadu. Então de posse desse arquivo. Aí o arquivo já está aqui para nós.
+
+96
+00:12:02.810 --> 00:12:10.420
+Kadu Gertners: Beleza, galera. Vamos lá. Primeiro ponto caduzão. Você montou essa aula? De onde desse link aqui.
+
+97
+00:12:10.810 --> 00:12:12.880
+Kadu Gertners: Então, ó o link.
+
+98
+00:12:13.000 --> 00:12:18.920
+Kadu Gertners: Ele foi montado desse link aqui, ó beleza.
+
+99
+00:12:19.920 --> 00:12:22.460
+Kadu Gertners: Então é essa matéria aí,
+
+100
+00:12:23.400 --> 00:12:33.969
+Kadu Gertners: beleza, que foi que eu montei o material para vocês. E aí, galera tem um detalhe. O que acontece? Eu fiz
+
+101
+00:12:34.240 --> 00:12:46.800
+Kadu Gertners: é exatamente a adaptação de novo. Essa parte do material oficial aqui, o material oficial é em inglês.
+
+102
+00:12:47.130 --> 00:13:03.869
+Kadu Gertners: Então, quando vocês pegarem e verem algumas questões, aí verem alguns comandos, vocês vão ver que eles estão em inglês. Mesmo que você troque aqui de inglês para Português,
+
+103
+00:13:06.000 --> 00:13:10.909
+Kadu Gertners: tem algumas partes que elas não são traduzidas,
+
+104
+00:13:11.560 --> 00:13:29.169
+Kadu Gertners: beleza. Então tem alguns comandos aqui que eles não são traduzidos. Mas o que eu fiz no nosso material para facilitar para todos, eu resolvi traduzir algumas coisas para nós falarmos aqui com mais tranquilidade.
+
+105
+00:13:29.250 --> 00:13:34.500
+Kadu Gertners: Tá legal, mais o material pessoal em inglês é esse aqui dessa página.
+
+106
+00:13:35.210 --> 00:13:36.389
+Kadu Gertners: Tudo bem,
+
+107
+00:13:36.930 --> 00:13:48.510
+Kadu Gertners: lógico. Se confundir vocês ou qualquer coisa que vocês queiram tirar de dúvidas. Enfim, podem me procurar. Não tem problema nenhum,
+
+108
+00:13:48.920 --> 00:13:56.620
+Kadu Gertners: tá legal. Eu só estou tentando facilitar um pouquinho para vocês. Tá bom, então vamos lá.
+
+109
+00:13:56.760 --> 00:14:02.639
+Kadu Gertners: Então, o que acontece se nós vamos usar hoje. Mais uma vez, o Sk. Light Studio.
+
+110
+00:14:02.870 --> 00:14:09.300
+Kadu Gertners: Tá bom. Nós vamos fazer como eu falei, uma aula prática. Então, beleza. Então vamos acessar aqui
+
+111
+00:14:09.630 --> 00:14:11.560
+Kadu Gertners: o nosso ambiente.
+
+112
+00:14:13.690 --> 00:14:17.729
+Kadu Gertners: E vamos pegar aqui e vamos lá
+
+113
+00:14:17.850 --> 00:14:22.529
+Kadu Gertners: para o nosso diretório aqui no meu notebook, né?
+
+114
+00:14:23.360 --> 00:14:28.140
+Kadu Gertners: E eu vou executar esse arquivo aqui. Sklattitude zero.
+
+115
+00:14:28.790 --> 00:14:31.870
+Kadu Gertners: Tá bom, beleza.
+
+116
+00:14:32.450 --> 00:14:36.050
+Kadu Gertners: Bom, está aqui, né?
+
+117
+00:14:36.950 --> 00:14:53.939
+Kadu Gertners: Beleza pura. E aqui como nós vamos usar um outro Database hoje vou fazer aquele procedimento no qual normalmente eu tenho feito. Eu clico com o botão direito aqui, e vou remover esse banco de dados daqui.
+
+118
+00:14:55.050 --> 00:15:00.890
+Kadu Gertners: Então, Yes, tirei o banco de dados daqui só relembrando
+
+119
+00:15:01.030 --> 00:15:15.279
+Kadu Gertners: mais uma vez quando eu faço isso, né, caduzão? Você só tirou o banco de dados da visão do Slides Studio. Eu não apaguei o arquivo,
+
+120
+00:15:15.880 --> 00:15:19.519
+Kadu Gertners: beleza, o arquivo continua existindo.
+
+121
+00:15:19.760 --> 00:15:20.740
+Kadu Gertners: Tá?
+
+122
+00:15:20.930 --> 00:15:22.270
+Kadu Gertners: Então vamos lá
+
+123
+00:15:22.380 --> 00:15:30.399
+Kadu Gertners: então para a aula de hoje. Nós vamos fazer aquele procedimento no qual temos feito. Eu vou acessar lá, né?
+
+124
+00:15:30.650 --> 00:15:35.529
+Kadu Gertners: A parte aqui, ó banco de dados, adicionar
+
+125
+00:15:35.640 --> 00:15:39.620
+Kadu Gertners: banco de dados. E aí nós vamos
+
+126
+00:15:40.240 --> 00:15:43.810
+Kadu Gertners: na janela. Banco de dados, data base.
+
+127
+00:15:44.070 --> 00:15:56.869
+Kadu Gertners: Nós vamos escolher a pasta. Então clica na pasta e reparem que ele abre numa pastinha aqui, na qual está para mim, que ele já mostra outros bancos de dados.
+
+128
+00:15:57.240 --> 00:16:06.139
+Kadu Gertners: E aí, por acaso o banco de dados que nós acabamos de tirar aqui é esse último aqui que nós usamos na semana passada.
+
+129
+00:16:06.890 --> 00:16:25.980
+Kadu Gertners: Beleza. Então ele está aqui. Como eu falei para vocês, ele não foi apagado na visão do sistema operacional. Então, pelo sistema operacional, pela parte do Windows Explorer. Aquele arquivinho continua existindo.
+
+130
+00:16:26.600 --> 00:16:36.100
+Kadu Gertners: Tá legal. Então, ó, agora nós vamos botar aqui o nome desse arquivo aqui. Ligação sublinhado, tabelas Db:
+
+131
+00:16:36.560 --> 00:16:41.299
+Kadu Gertners: copiei o nome do arquivo, coloquei para cá.
+
+132
+00:16:42.860 --> 00:16:48.590
+Kadu Gertners: Seleciono o nome do arquivo. É mostrado aqui.
+
+133
+00:16:48.920 --> 00:16:53.669
+Kadu Gertners: Testa conexão. Ele dá um Ok para nós
+
+134
+00:16:53.770 --> 00:16:56.030
+Kadu Gertners: e clicamos aqui no botão. Ok,
+
+135
+00:16:56.780 --> 00:16:59.679
+Kadu Gertners: passamos a ter o banco de dados aqui.
+
+136
+00:16:59.810 --> 00:17:01.530
+Kadu Gertners: Dois cliques nele aqui.
+
+137
+00:17:02.190 --> 00:17:08.740
+Kadu Gertners: Beleza passa a mostrar do lado esquerdo para nós, a opção, tabelas e visualizações.
+
+138
+00:17:08.849 --> 00:17:20.460
+Kadu Gertners: Maravilha aí o que acontece? Bom, nós aqui, caduzão, galera, olha só algumas colocações interessantes aí
+
+139
+00:17:20.780 --> 00:17:35.549
+Kadu Gertners: que é uma decisão de vocês. Lógico, eu vou dar uma sugestão. Um caminho que você pode seguir não é uma obrigatoriedade, é só uma dica ou em alguns pontos considerados uma boa prática.
+
+140
+00:17:35.750 --> 00:17:49.310
+Kadu Gertners: Então, repara aqui nós temos duas tabelas: a tabela de departamentos e a tabela, funcionários legal, a tabela de departamentos. Ela tem o Id do departamento
+
+141
+00:17:49.510 --> 00:17:51.020
+Kadu Gertners: que é inteiro.
+
+142
+00:17:51.270 --> 00:17:58.450
+Kadu Gertners: Tem o departamento em si. A descrição do departamento que é um texto.
+
+143
+00:17:58.810 --> 00:18:08.089
+Kadu Gertners: Tem a cidade que é um texto. E aí? Olha que interessante. Aqui ele coloca a palavra constrangente
+
+144
+00:18:08.380 --> 00:18:28.050
+Kadu Gertners: e ele coloca um apelido. Olha que legal. Ele está indicando aqui. Pk, que significa primarkia. Chave primária, sublinhado. Mas é a chave primária de qual tabela da tabela, departamentos. Por isso que eu botei Pk sublinhado departamentos.
+
+145
+00:18:28.630 --> 00:18:42.830
+Kadu Gertners: Aí colocamos aqui a primeira Key e entre parênteses qual é a coluna ou quais são as colunas que pertencem à chave primária.
+
+146
+00:18:43.870 --> 00:18:45.050
+Kadu Gertners: Tá legal.
+
+147
+00:18:45.150 --> 00:18:49.260
+Kadu Gertners: Aí, ó, nós botamos aqui a Ad do departamento,
+
+148
+00:18:49.420 --> 00:18:51.940
+Kadu Gertners: que é exatamente essa primeira coluna.
+
+149
+00:18:52.970 --> 00:19:06.919
+Kadu Gertners: Beleza, essa primeira coluna aqui, beleza. Aí ele faz uma outra colocação interessante que ele fala para nós assim, olha, vamos criar também uma outra constrente
+
+150
+00:19:07.080 --> 00:19:13.080
+Kadu Gertners: galera constrente pode ser traduzido como restrição.
+
+151
+00:19:13.920 --> 00:19:26.890
+Kadu Gertners: Tá legal. Agora, Caldzon, essa constrente aqui tem que ficar dessa forma tem por quê? Porque isso é a palavra reservada do comando que foi criado.
+
+152
+00:19:27.320 --> 00:19:36.220
+Kadu Gertners: Então a parte de Skl tem algumas partes do Skl que eles são na língua inglesa. Então tem que ficar aqui. Constroente mesmo
+
+153
+00:19:36.520 --> 00:19:38.210
+Kadu Gertners: tanto aqui como aqui.
+
+154
+00:19:38.790 --> 00:19:52.410
+Kadu Gertners: Então, ó constante, aí, olha que legal. Ele coloca aqui o Nick. Quer dizer, o Nick está em inglês, né? Mas o Nick significa em português único.
+
+155
+00:19:52.750 --> 00:20:10.749
+Kadu Gertners: Então ele vai colocar um apelido Unic. Aí ele pega departamento e cidade usa a palavra reservada, Unic. E quem ele vai considerar como valor único a junção
+
+156
+00:20:10.950 --> 00:20:25.000
+Kadu Gertners: da coluna departamento com a coluna cidade. Então, se você tiver o Departamento dois e botar Rio de Janeiro, você nunca mais vai poder botar dois Rio de Janeiro,
+
+157
+00:20:25.070 --> 00:20:31.129
+Kadu Gertners: senão ele indicará para nós que o valor está duplicado.
+
+158
+00:20:32.280 --> 00:20:33.390
+Kadu Gertners: Tá legal.
+
+159
+00:20:34.980 --> 00:20:38.040
+Kadu Gertners: Bom. Aqui na tabela. Funcionários
+
+160
+00:20:38.520 --> 00:20:50.190
+Kadu Gertners: legal, nós temos a coluna. Matrícula que ela é inteiro. Ínteger é First Name, não tá bom, isso não
+
+161
+00:20:50.550 --> 00:20:52.039
+Kadu Gertners: vamos mudar isso aqui.
+
+162
+00:20:52.860 --> 00:20:58.740
+Kadu Gertners: First Name, vamos botar assim force name.
+
+163
+00:20:59.370 --> 00:21:00.250
+Kadu Gertners: E aí?
+
+164
+00:21:03.690 --> 00:21:05.830
+Kadu Gertners: Primeiro nome.
+
+165
+00:21:07.220 --> 00:21:09.150
+Kadu Gertners: Substitui tudo.
+
+166
+00:21:09.480 --> 00:21:12.339
+Kadu Gertners: Esse aqui também. Last Name.
+
+167
+00:21:14.430 --> 00:21:26.060
+Kadu Gertners: Vamos botar aqui. Último nome substitui tudo. E esse celery aqui também não tá bom. Não, celery.
+
+168
+00:21:26.770 --> 00:21:31.490
+Kadu Gertners: Salário, beleza.
+
+169
+00:21:31.770 --> 00:21:33.009
+Kadu Gertners: Desculpe, meu.
+
+170
+00:21:33.200 --> 00:21:36.140
+Kadu Gertners: Eu bapei essa mosca aí. Mas vamos lá,
+
+171
+00:21:36.910 --> 00:21:41.019
+Kadu Gertners: depois eu vou atualizar o arquivinho para vocês aí no material de vocês, tá?
+
+172
+00:21:41.380 --> 00:21:42.380
+Kadu Gertners: Vamos lá.
+
+173
+00:21:42.710 --> 00:21:46.189
+Kadu Gertners: A tabela, funcionários está aqui.
+
+174
+00:21:46.350 --> 00:21:49.970
+Kadu Gertners: Então tem a coluna, matrícula
+
+175
+00:21:50.080 --> 00:22:09.739
+Kadu Gertners: tem. Ele é do tipo inteiro legal. O primeiro nome é texto. O último nome, texto também salário é um número no qual tem dez números, sendo que os dois últimos números são o quê, decimais?
+
+176
+00:22:10.440 --> 00:22:17.010
+Kadu Gertners: Não é beleza aí. Olha que maneiro ele pega. Ele fala. Olha,
+
+177
+00:22:17.120 --> 00:22:22.640
+Kadu Gertners: ele também tem a coluna nessa tabela chamada Id. Departamento,
+
+178
+00:22:23.220 --> 00:22:25.519
+Kadu Gertners: que ela é do tipo inteiro.
+
+179
+00:22:25.810 --> 00:22:30.230
+Kadu Gertners: Aqui também é do tipo inteiro e referencia
+
+180
+00:22:30.340 --> 00:22:40.700
+Kadu Gertners: a tabela departamentos. Que é essa tabela através da própria coluna aí de departamento. Que é essa coluna aqui?
+
+181
+00:22:42.000 --> 00:22:53.330
+Kadu Gertners: Beleza. Então isso é a definição. É como nós associamos. Fazemos um vínculo de uma chave estrangeira. Exatamente isso.
+
+182
+00:22:54.220 --> 00:23:00.819
+Kadu Gertners: Como é que nós referenciamos a tabela corrente e mencionamos a tabela, mãe.
+
+183
+00:23:01.220 --> 00:23:03.340
+Kadu Gertners: É exatamente dessa forma.
+
+184
+00:23:04.480 --> 00:23:08.489
+Kadu Gertners: Então, na criação das tabelas, né?
+
+185
+00:23:08.800 --> 00:23:12.120
+Kadu Gertners: Legal, aí nós temos uma outra constrente,
+
+186
+00:23:12.250 --> 00:23:20.120
+Kadu Gertners: uma outra restrição que fala. Olha, Pk, que é a Primer Key da tabela. Agora a funcionários.
+
+187
+00:23:20.300 --> 00:23:26.230
+Kadu Gertners: A primeira Key entre parênteses é somente a coluna matrícula.
+
+188
+00:23:27.150 --> 00:23:30.430
+Kadu Gertners: Então ó, vamos pegar os comandos.
+
+189
+00:23:33.290 --> 00:23:40.600
+Kadu Gertners: Vamos colocar para cá e vamos criar as nossas tabelas.
+
+190
+00:23:41.960 --> 00:23:43.609
+Kadu Gertners: Primeira tabela.
+
+191
+00:23:46.730 --> 00:23:52.430
+Kadu Gertners: E aí, ó repara só. Departamentos.
+
+192
+00:23:53.640 --> 00:23:55.619
+Kadu Gertners: E agora funcionários também.
+
+193
+00:23:57.240 --> 00:24:01.380
+Kadu Gertners: Aqui estão as colunas de departamentos.
+
+194
+00:24:02.390 --> 00:24:04.939
+Kadu Gertners: Aqui estão as colunas de funcionários.
+
+195
+00:24:05.740 --> 00:24:06.780
+Kadu Gertners: Beleza.
+
+196
+00:24:07.430 --> 00:24:08.670
+Kadu Gertners: Bom, aí
+
+197
+00:24:11.990 --> 00:24:13.150
+Kadu Gertners: vamos lá.
+
+198
+00:24:13.650 --> 00:24:18.819
+Kadu Gertners: Se nós pegarmos e dermos um Select para cada uma dessas tabelas.
+
+199
+00:24:20.040 --> 00:24:21.829
+Kadu Gertners: Nós vamos reparar
+
+200
+00:24:22.150 --> 00:24:32.949
+Kadu Gertners: que por enquanto, essas tabelas estão vazias. Não tem nenhum registro, porque nós não executamos por enquanto, nenhum comando Insert.
+
+201
+00:24:33.000 --> 00:24:44.659
+Kadu Gertners: E não fizemos uma carga de dados. Não pegamos um arquivinho de fora do banco de dados e colocamos dentro da tabela. Não fizemos nenhuma das duas opções.
+
+202
+00:24:44.780 --> 00:24:46.490
+Kadu Gertners: Então a tabela está vazia.
+
+203
+00:24:47.030 --> 00:24:58.100
+Kadu Gertners: Beleza, então, como exemplo, vamos pegar aqui e nós vamos inserir ó
+
+204
+00:24:59.090 --> 00:25:02.880
+Kadu Gertners: no departamento, nós vamos inserir o Departamento um,
+
+205
+00:25:04.450 --> 00:25:17.590
+Kadu Gertners: que é o Departamento de Taxas como se fossem taxas e na cidade Atlanta. O segundo é o Departamento Ti de Ti que fica em Boston.
+
+206
+00:25:18.220 --> 00:25:19.350
+Kadu Gertners: Beleza
+
+207
+00:25:19.660 --> 00:25:31.909
+Kadu Gertners: nos funcionários. Nós temos quatro funcionários. A Júlia Rais, que ganha por ano um5.trezentos pertencem ao departamento. Um taxi,
+
+208
+00:25:33.250 --> 00:25:34.699
+Kadu Gertners: a Janete,
+
+209
+00:25:35.460 --> 00:25:43.999
+Kadu Gertners: que o sobrenome dela. O último nome é King. Ela ganha por ano noventa e oito mil dólares. E o departamento dela também é taxi
+
+210
+00:25:44.690 --> 00:25:57.219
+Kadu Gertners: legal. O três. O Arthur tem o último nome, papas e ele ganha por ano setenta e dois.setecentos. Ele está no Departamento dois, que é o Departamento de Ti
+
+211
+00:25:57.730 --> 00:26:01.910
+Kadu Gertners: Legal. E finalmente, o Michael,
+
+212
+00:26:04.400 --> 00:26:14.949
+Kadu Gertners: o último nome. Taylor ganha por ano oitenta e nove.quinhentos indicando aqui o dois, que é também do departamento de Ti.
+
+213
+00:26:15.340 --> 00:26:22.839
+Kadu Gertners: Maravilha. Pegamos esses comandos aqui, jogamos para cá.
+
+214
+00:26:24.840 --> 00:26:28.579
+Kadu Gertners: Ó, vamos fazer um inserto. Primeiro, para departamentos.
+
+215
+00:26:28.870 --> 00:26:37.189
+Kadu Gertners: São dois registros, duas linhas legal e para funcionários. São quatro.
+
+216
+00:26:38.480 --> 00:26:48.579
+Kadu Gertners: Ó quatro para funcionários Cadu, podemos checar aí agora. Como é que estão os conteúdos das tabelas? Sim,
+
+217
+00:26:48.870 --> 00:26:54.660
+Kadu Gertners: faremos isso agora, ó Select.
+
+218
+00:26:55.620 --> 00:26:59.500
+Kadu Gertners: Todas as colunas a partir da tabela departamentos.
+
+219
+00:26:59.650 --> 00:27:02.529
+Kadu Gertners: Ó tá bonitinho. Aqui.
+
+220
+00:27:02.630 --> 00:27:13.360
+Kadu Gertners: Dois registros e o funcionários, os quatro registros, beleza.
+
+221
+00:27:13.650 --> 00:27:24.509
+Kadu Gertners: Bom, antes de prosseguir, deixa eu ver se vocês já colocaram alguma coisa aqui de mensagem aqui
+
+222
+00:27:24.840 --> 00:27:31.250
+Kadu Gertners: Pedro. Ok, excelente beleza. Galera até aqui, turma, dúvidas?
+
+223
+00:27:31.400 --> 00:27:38.130
+Kadu Gertners: Alguma coisa que ainda não tenha ficado clara até hoje. Ok, Lucas. Ok, Léo,
+
+224
+00:27:38.290 --> 00:27:45.060
+Kadu Gertners: querem perguntar alguma coisa? Acrescentar alguma coisa ou podemos lhe seguir. Vamos embora, então. Tá legal.
+
+225
+00:27:48.850 --> 00:27:53.879
+Kadu Gertners: Mas deu erro de sintaxe aonde Mateus, exatamente em que ponto, meu amigo.
+
+226
+00:27:54.590 --> 00:28:00.589
+Kadu Gertners: Mas você está seguindo? Passo sim ou passinho que eu estou fazendo aí? Pegando o comando inteiro.
+
+227
+00:28:00.800 --> 00:28:08.930
+Kadu Gertners: Tem que seguir e botar o comandinho todo conforme eu tô botando, tá? Matheus, aonde você teve o erro, amigão. Fala comigo.
+
+228
+00:28:09.130 --> 00:28:22.110
+Matheus Ramos: No meu caso, aqui Cadu foi na ligação tabela. Você está dando erro de Sintax aqui, mas eu vou recopiar o código e colar aqui de novo para ver se ali funciona.
+
+229
+00:28:22.640 --> 00:28:23.300
+Kadu Gertners: Eu vou.
+
+230
+00:28:23.300 --> 00:28:27.070
+Matheus Ramos: Ponto de vírgula que ficou faltando no copiar escolar.
+
+231
+00:28:27.710 --> 00:28:29.970
+Matheus Ramos: Pode ser beleza.
+
+232
+00:28:29.970 --> 00:28:30.340
+Kadu Gertners: Bom dia.
+
+233
+00:28:30.340 --> 00:28:31.170
+Matheus Ramos: Fazer isso.
+
+234
+00:28:31.870 --> 00:28:40.520
+Kadu Gertners: Pode ser. Eu vou executar aqui também. Mas beleza, Matheus qualquer coisa. Dá um toque aí de novo, meu amigo. Eu vou tentar executar aqui também, beleza.
+
+235
+00:28:42.640 --> 00:28:44.090
+Kadu Gertners: Bom, vamos lá.
+
+236
+00:28:44.390 --> 00:28:57.770
+Kadu Gertners: Legal Caduzon como exemplo aqui. Olha que legal! Eu vou dar um select de todas as colunas aí, o que acontece até aqui? A gente conhece a partir da tabela. Funcionários,
+
+237
+00:28:57.960 --> 00:29:07.319
+Kadu Gertners: beleza. Só que na próxima linha, Opa caduzão. Apareceu um Join Join. Significa o quê? Ligação
+
+238
+00:29:08.090 --> 00:29:20.349
+Kadu Gertners: com a tabela, departamentos. E aí, como é que acontece, caduzão? Essa conversa de uma tabela com a outra. Olha que bacana! Aí vem a cláusula on
+
+239
+00:29:20.360 --> 00:29:30.759
+Kadu Gertners: para fazer a ligação. E aí a tabela, funcionários a partir da coluna Ai de sublinhado departamento
+
+240
+00:29:30.780 --> 00:29:34.639
+Kadu Gertners: tem que ser igual. Tem que ter o mesmo valor
+
+241
+00:29:35.340 --> 00:29:45.729
+Kadu Gertners: lá da tabela, departamentos e a coluna, a de departamento. Então, a conversa entre as tabelas.
+
+242
+00:29:45.780 --> 00:29:58.580
+Kadu Gertners: Ela ocorre através da coluna Id sublinhado departamento que aparece tanto na tabela. Funcionários como na tabela departamentos.
+
+243
+00:29:58.990 --> 00:30:07.709
+Kadu Gertners: E aí vai ordenar pelo funcionário, pela tabela, funcionários,
+
+244
+00:30:07.840 --> 00:30:10.830
+Kadu Gertners: ponto a coluna. Ai de departamento.
+
+245
+00:30:11.440 --> 00:30:21.469
+Kadu Gertners: Então, ó, pegamos o comando, colocamos para cá e vamos tentar executar.
+
+246
+00:30:22.860 --> 00:30:34.419
+Kadu Gertners: Ó mostrou bonitinho beleza pura. Reparem que eu só usei uma coluna por ordenação.
+
+247
+00:30:35.180 --> 00:30:36.270
+Kadu Gertners: Beleza.
+
+248
+00:30:36.400 --> 00:30:42.859
+Kadu Gertners: Nós podemos causar usar outra coluna para ordenação. Lógico,
+
+249
+00:30:43.300 --> 00:30:46.229
+Kadu Gertners: é só você repetir o comando
+
+250
+00:30:46.350 --> 00:30:50.789
+Kadu Gertners: do Select até aqui. O fim da linha do on.
+
+251
+00:30:50.890 --> 00:31:03.220
+Kadu Gertners: Ó e aí, Order by. Agora eu quero ordenar pela tabela funcionários.
+
+252
+00:31:03.740 --> 00:31:07.529
+Kadu Gertners: Só que eu quero ordenar pelo primeiro nome.
+
+253
+00:31:09.990 --> 00:31:12.019
+Kadu Gertners: Quero ordenar pelo primeiro nome.
+
+254
+00:31:12.550 --> 00:31:21.120
+Kadu Gertners: Ó seleciona executa. Ó primeiro nome. Vamos ver se ordenou. Ó primeiro A,
+
+255
+00:31:21.790 --> 00:31:34.150
+Kadu Gertners: depois o J A, depois o Ju e depois o M. Michael. Então realmente ordenou por essa coluna, beleza.
+
+256
+00:31:36.290 --> 00:31:37.860
+Kadu Gertners: Bom, vamos seguir.
+
+257
+00:31:39.480 --> 00:31:41.819
+Kadu Gertners: E aí, Matheus descobriu o erro, amigo.
+
+258
+00:31:43.770 --> 00:31:45.229
+Kadu Gertners: Como é que ficou aí.
+
+259
+00:31:46.360 --> 00:31:52.369
+Matheus Ramos: Na verdade, agora está parecendo que não é possível executar a consulta
+
+260
+00:31:52.690 --> 00:31:56.879
+Matheus Ramos: no banco de dados indefinido ou inválido.
+
+261
+00:31:58.530 --> 00:32:00.419
+Kadu Gertners: Você criou o banco de dados, cara.
+
+262
+00:32:01.480 --> 00:32:02.880
+Matheus Ramos: Criei, criei.
+
+263
+00:32:04.560 --> 00:32:06.310
+Matheus Ramos: Deixa eu tentar de novo aqui.
+
+264
+00:32:07.130 --> 00:32:11.729
+Matheus Ramos: Talvez tenha sido porque na hora que eu fiz o segundo Insert,
+
+265
+00:32:12.020 --> 00:32:15.310
+Matheus Ramos: que foi na criação da tabela dos funcionários,
+
+266
+00:32:15.590 --> 00:32:22.859
+Matheus Ramos: apareceu a tabela e eu cliquei em cima. E aí na hora de tentar voltar para a tela dos comandos.
+
+267
+00:32:22.980 --> 00:32:26.399
+Matheus Ramos: Eu acabei clicando em alguma coisa errada aqui que deve ter
+
+268
+00:32:26.760 --> 00:32:29.429
+Matheus Ramos: corrompido o arquivo. Vou desligar do banco de dados.
+
+269
+00:32:31.120 --> 00:32:32.009
+Matheus Ramos: Eu vou tentar.
+
+270
+00:32:32.010 --> 00:32:32.430
+Kadu Gertners: Mulher.
+
+271
+00:32:32.430 --> 00:32:33.439
+Matheus Ramos: Que, por enquanto.
+
+272
+00:32:33.850 --> 00:32:34.560
+Kadu Gertners: Tá bom.
+
+273
+00:32:34.980 --> 00:32:36.310
+Matheus Ramos: Beleza valeu, cadu.
+
+274
+00:32:36.310 --> 00:32:38.760
+Kadu Gertners: Beleza pô de nada, irmão.
+
+275
+00:32:39.690 --> 00:32:52.889
+Kadu Gertners: Bom Alexandre, aí está dando uma dica. Se for o caso de você tentar dopar a tabela e repetir do início. Pode ser uma sugestão também, né, Alexandre? Obrigado aí pela ajuda. Para o Matheus. Pode ser uma dica, também,
+
+276
+00:32:54.240 --> 00:32:55.820
+Kadu Gertners: beleza. Vamos lá.
+
+277
+00:32:57.040 --> 00:33:09.179
+Kadu Gertners: Legal, Caduzon. Vamos lá. Próximo comando. Ó vamos lá. Aí nós vamos fazer o seguinte, galera. O Join repara que eu botei nesse primeiro comando. Eu só botei escrito Join.
+
+278
+00:33:09.270 --> 00:33:18.230
+Kadu Gertners: Agora caduzone se eu Botar Inner, Join, galera, já vou adiantar o Inner Join. É a mesma coisa do que o John.
+
+279
+00:33:19.040 --> 00:33:23.150
+Kadu Gertners: Mesma coisa, mesma finalidade.
+
+280
+00:33:23.760 --> 00:33:36.520
+Kadu Gertners: O Join Pool significa ligação, e o Winner significa uma ligação interna Inner significa interno.
+
+281
+00:33:37.370 --> 00:33:42.940
+Kadu Gertners: Então repara, vamos pegar esse comando e vamos executar de novo.
+
+282
+00:33:43.330 --> 00:33:52.920
+Kadu Gertners: Quer dizer, e vamos executar esse comando pela primeira vez com o Inner John, selecionamos o comando executa,
+
+283
+00:33:53.230 --> 00:34:01.450
+Kadu Gertners: então trouxe o resultado. Ordenando pelo funcionários id departamento.
+
+284
+00:34:01.820 --> 00:34:11.880
+Kadu Gertners: Ó, se você abrir aqui, ó esse ar de departamento aqui.
+
+285
+00:34:13.949 --> 00:34:17.929
+Kadu Gertners: Ele inicialmente está mencionando a tabela, funcionários
+
+286
+00:34:18.620 --> 00:34:26.140
+Kadu Gertners: e o Id. Departamento um aqui é o da tabela departamentos, porque ele está seguindo a ordem das tabelas aqui.
+
+287
+00:34:26.550 --> 00:34:27.679
+Kadu Gertners: Tá legal.
+
+288
+00:34:28.739 --> 00:34:30.120
+Kadu Gertners: Vamos seguir.
+
+289
+00:34:30.500 --> 00:34:32.750
+Kadu Gertners: Ó galera, por favor.
+
+290
+00:34:32.940 --> 00:34:40.039
+Kadu Gertners: Se tiver dúvidas tiver estranho não tiver legal, sinaliza,
+
+291
+00:34:40.300 --> 00:34:50.310
+Kadu Gertners: sinaliza que vocês precisam perceber algumas coisas, e vocês precisam realmente de agora por diante. Galera, lembrem se do que eu falei no início da aula.
+
+292
+00:34:50.530 --> 00:34:55.540
+Kadu Gertners: O At não está muito fácil, não está?
+
+293
+00:34:55.800 --> 00:35:05.279
+Kadu Gertners: Quando eu mostrar para vocês, eu vou pontuar algumas coisas para vocês que vocês vão ter que pensar várias coisas aí para vocês resolverem as questões.
+
+294
+00:35:05.440 --> 00:35:07.850
+Kadu Gertners: Então vai na minha.
+
+295
+00:35:07.980 --> 00:35:14.430
+Kadu Gertners: Vai testando. Vai treinando, se tiver com alguma dúvida. Vai perguntando.
+
+296
+00:35:15.480 --> 00:35:16.909
+Kadu Gertners: Bom, vamos lá.
+
+297
+00:35:19.720 --> 00:35:32.499
+Kadu Gertners: Bom, aqui no próximo comando. Isso aqui é uma sintaxe, que é a sintaxe na qual eu até prefiro.
+
+298
+00:35:32.800 --> 00:35:33.710
+Kadu Gertners: Agora
+
+299
+00:35:34.340 --> 00:35:54.250
+Kadu Gertners: tem banco de dados antigos que ele usa uma sintaxe assim. Ó, olha que interessante. Ele faz um select de todas as colunas. Ele menciona from a tabela, funcionários, vírgula, uma segunda tabela, departamentos e na cláusulaware
+
+300
+00:35:54.720 --> 00:35:59.740
+Kadu Gertners: que é feita a ligação entre as tabelas.
+
+301
+00:36:00.010 --> 00:36:03.240
+Kadu Gertners: Você vai reparar que esse ou era aqui. Ó,
+
+302
+00:36:03.370 --> 00:36:16.159
+Kadu Gertners: esse item aqui que eu estou destacando. Funcionários Id, departamento igual a departamentos Id. Departamento é igual ao que está aqui na cláusula. Um igualzinho.
+
+303
+00:36:16.990 --> 00:36:22.050
+Kadu Gertners: Beleza Macadur. Por que você está falando uma coisa que de repente é mais antiga
+
+304
+00:36:22.120 --> 00:36:38.029
+Kadu Gertners: que talvez muitas pessoas não estão usando com tanta frequência hoje, porque de repente, vocês podem pegar um sistema mais antigo e vocês terem que fazer a manutenção em uma base de dados muito mais antiga,
+
+305
+00:36:39.180 --> 00:36:45.870
+Kadu Gertners: entendeu? E aí o pessoal usava essa referência desse comando aqui.
+
+306
+00:36:46.560 --> 00:36:55.449
+Kadu Gertners: Beleza de novo. Estamos ordenando pela tabela, funcionários, a coluna Id, departamento.
+
+307
+00:36:55.910 --> 00:37:00.690
+Kadu Gertners: Então, ó, se você pegar o comando e colocar para cá,
+
+308
+00:37:02.420 --> 00:37:08.990
+Kadu Gertners: você vai reparar que ele vai dar exatamente esse resultado aqui. Ó, vamos executar.
+
+309
+00:37:09.230 --> 00:37:12.670
+Kadu Gertners: Selecionamos o comando e play.
+
+310
+00:37:13.070 --> 00:37:17.449
+Kadu Gertners: Ó, ele dá o mesmo resultado.
+
+311
+00:37:20.140 --> 00:37:23.030
+Kadu Gertners: Ok, vamos seguir
+
+312
+00:37:23.720 --> 00:37:33.619
+Kadu Gertners: beleza, galera aqui. Eu não entrei em muitos detalhes. Eu só fiz a ligação para mostrar tabelas. E lembrem se,
+
+313
+00:37:33.730 --> 00:37:37.500
+Kadu Gertners: quando for para a próxima parte da matéria.
+
+314
+00:37:37.630 --> 00:37:46.139
+Kadu Gertners: Nós vamos começar a usar também a parte do Group by, não é?
+
+315
+00:37:46.250 --> 00:37:48.209
+Kadu Gertners: É do Heavy.
+
+316
+00:37:48.740 --> 00:37:53.750
+Kadu Gertners: E aí lembrem se, nós não vamos fazer isso só para uma tabela.
+
+317
+00:37:54.120 --> 00:38:11.749
+Kadu Gertners: Agora, nesse momento da matéria de vocês, nós vamos começar a fazer ligações de tabelas, e nós vamos pegar determinadas colunas para montarmos o nosso group by. E para mostrar o resultado, por alguma função de agregação,
+
+318
+00:38:12.050 --> 00:38:23.179
+Kadu Gertners: seja uma função de agregação, que é o Sam, que é somar, seja o count que é contar seja o Min, que é o mínimo, seja o Max que é o valor máximo.
+
+319
+00:38:24.310 --> 00:38:25.420
+Kadu Gertners: Beleza.
+
+320
+00:38:26.070 --> 00:38:33.019
+Kadu Gertners: Bom, vamos lá, pessoal. É lógico. Oi, fala comigo.
+
+321
+00:38:33.430 --> 00:38:35.619
+lucas.histirari: Desculpa atrapalhar aqui. A gente está mandando.
+
+322
+00:38:35.620 --> 00:38:36.010
+Kadu Gertners: Não é.
+
+323
+00:38:36.010 --> 00:38:37.330
+lucas.histirari: Aí no chat.
+
+324
+00:38:37.730 --> 00:38:38.620
+Kadu Gertners: Opa, é verdade.
+
+325
+00:38:38.620 --> 00:38:40.779
+lucas.histirari: Não perdeu o raciocínio.
+
+326
+00:38:41.420 --> 00:38:48.870
+Kadu Gertners: Tá bom, professor. Vamos lá, professor. Pode dar uma destrinchada? Boa no Inerjoy
+
+327
+00:38:49.720 --> 00:38:58.339
+Kadu Gertners: Brother me deu um salve falando para pegar bem essa parte cara. O Inerjoy é exatamente, né, Lucas Ishirare.
+
+328
+00:38:58.470 --> 00:39:03.570
+Kadu Gertners: O Inerjoy é exatamente a ligação de uma tabela com a outra.
+
+329
+00:39:03.810 --> 00:39:16.379
+Kadu Gertners: E essa ligação de uma tabela com a outra. Ela ocorre de uma chave primária de uma tabela mãe, com a chave estrangeira de uma tabela, filha,
+
+330
+00:39:16.840 --> 00:39:26.159
+Kadu Gertners: entendeu, Lucas? E realmente é o que você está falando. É extremamente importante de vocês começarem a entender isso.
+
+331
+00:39:26.760 --> 00:39:30.020
+Kadu Gertners: E aí, Lucas e Shirari.
+
+332
+00:39:30.170 --> 00:39:35.689
+Kadu Gertners: Vocês têm que fazer esse vínculo através desse comando
+
+333
+00:39:35.830 --> 00:39:42.050
+Kadu Gertners: desse comando aqui, que é o comando que eu acho mais interessante vocês usarem
+
+334
+00:39:42.170 --> 00:40:00.199
+Kadu Gertners: o inner Joinabela Inner Join, a segunda tabela. Você tem que usar o on que indica que você vai fazer um link, uma ligação,
+
+335
+00:40:00.340 --> 00:40:07.099
+Kadu Gertners: uma conversação entre a coluna da primeira tabela,
+
+336
+00:40:07.810 --> 00:40:12.519
+Kadu Gertners: igualando com a coluna da segunda tabela.
+
+337
+00:40:13.480 --> 00:40:32.409
+Kadu Gertners: Beleza. Então esse vínculo aí, Lucas, você entender um pouquinho. Isso realmente é bem importante. Ah, mas caldozão. Como é que eu vou começar a perceber mais isso, né, Lucas? Quando você começar a executar mais os comandos para você começar a perceber como é que isso funciona,
+
+338
+00:40:33.470 --> 00:40:35.630
+Kadu Gertners: Lucas, tudo bem, meu amigo.
+
+339
+00:40:35.840 --> 00:40:41.790
+Kadu Gertners: Vê se você conseguiu entender alguma coisa ou está estranho? Ainda pode perguntar.
+
+340
+00:40:43.090 --> 00:40:50.599
+Kadu Gertners: Ok, Lucas, você respondeu, beleza, meu amigo. Se tiver dúvida de novo, volta aí. Pode perguntar. Não tem problema.
+
+341
+00:40:51.010 --> 00:40:58.310
+Kadu Gertners: Vamos lá, Gabriel Crepaldi. Esse Select traz o mesmo resultado do anterior que só tem o John. Sim,
+
+342
+00:40:58.420 --> 00:41:07.030
+Kadu Gertners: os três comandos. Gabriel Crepaldi. Ó, deixa eu destacar aqui para vocês esses três comandos aqui. Ó
+
+343
+00:41:08.280 --> 00:41:15.119
+Kadu Gertners: que eu estou destacando aqui na tela eles mostram exatamente o mesmo resultado,
+
+344
+00:41:15.510 --> 00:41:29.410
+Kadu Gertners: tendo usando só Join usando o inerjoin ou usando a notação da ligação das tabelas, não pela cláusula, on, mas pela cláusulaware.
+
+345
+00:41:30.620 --> 00:41:34.160
+Kadu Gertners: Tudo bem, Gabriel Crepaldi. Eles são realmente iguaizinhos.
+
+346
+00:41:35.280 --> 00:41:39.850
+Kadu Gertners: Beleza, meu amigo. Vê se você entendeu aí beleza, irmão
+
+347
+00:41:40.460 --> 00:41:49.289
+Kadu Gertners: Gabriel Diniz, vamos lá. O Joy no caso, ele pega os registros da tabela A e B, com ou sem em relação não,
+
+348
+00:41:49.420 --> 00:41:56.900
+Kadu Gertners: o Inerjoy é quando tem obrigatoriamente, Gabriel Diniz tem como relação entre as duas tabelas.
+
+349
+00:41:57.250 --> 00:42:04.109
+Kadu Gertners: Se não tiver um determinado valor, não estiver na outra tabela, não traz.
+
+350
+00:42:04.490 --> 00:42:14.500
+Kadu Gertners: Então tem que ter aí na sua afirmação, o John no caso, ele pega os registros da tabela A e B com relação
+
+351
+00:42:14.670 --> 00:42:21.130
+Kadu Gertners: o Inerj. Somente os registros da Tabela A e B com relação. É isso? Sim, é isso.
+
+352
+00:42:22.940 --> 00:42:31.039
+Kadu Gertners: Ok, Gabriel Diniz, beleza, beleza. Gabriel Diniz, maravilha, irmão.
+
+353
+00:42:32.210 --> 00:42:48.510
+Kadu Gertners: Vamos lá. João Vitor caduzão. Não sei se é por escolha sua, mas percebi que só de clicar no final de um código já fica selecionado automaticamente e é só executar que vai, cara. Tudo tranquilo. Pode ser? Não tem problema.
+
+354
+00:42:48.990 --> 00:42:52.410
+Kadu Gertners: Não tem problema nenhum problema nenhum.
+
+355
+00:42:53.000 --> 00:42:54.100
+Kadu Gertners: Tá bom.
+
+356
+00:42:55.340 --> 00:43:10.790
+Kadu Gertners: O Alexandre Oliveira está falando também. Ele só clica no final e aperta o F9 é, ele deve ter uma sensibilidade que ele percebe o início do comando até o fim. Se está funcionando, pessoal, está valendo sem problema nenhum.
+
+357
+00:43:11.200 --> 00:43:28.660
+Kadu Gertners: Eu estou tentando sempre selecionar o comando, até para quem não percebeu perceber que aquele comando está selecionado e eu clico no botão play para executar. Mas se vocês dois se sentem confortáveis em fazer assim, pessoal. Não tem problema nenhum.
+
+358
+00:43:28.870 --> 00:43:31.510
+Kadu Gertners: Tá bom, João e Alexandre. Problema zero.
+
+359
+00:43:31.650 --> 00:43:32.850
+Kadu Gertners: Problema nenhum.
+
+360
+00:43:33.150 --> 00:43:35.259
+Kadu Gertners: Tá bom, amigos, não tem problema nenhum.
+
+361
+00:43:38.930 --> 00:43:48.400
+Kadu Gertners: Bom, maravilha legal. Isso aí, galera! Perguntar, tirar dúvidas, entender isso aí. Muito bom.
+
+362
+00:43:48.680 --> 00:43:50.950
+Kadu Gertners: Vamos seguir Caldzon.
+
+363
+00:43:51.500 --> 00:44:03.160
+Kadu Gertners: Vamos seguir um pouco mais. Olha só. Aqui nós vamos começar a colocar uns outros conceitos também em evidência.
+
+364
+00:44:04.090 --> 00:44:05.459
+Kadu Gertners: Olha que legal!
+
+365
+00:44:07.990 --> 00:44:12.950
+Kadu Gertners: Temos a primeira tabela que é a distrito dois mil e vinte.
+
+366
+00:44:13.830 --> 00:44:17.760
+Kadu Gertners: Tem a coluna Id que é inteiro.
+
+367
+00:44:17.950 --> 00:44:21.929
+Kadu Gertners: Vai criar uma restrição
+
+368
+00:44:22.290 --> 00:44:31.779
+Kadu Gertners: usando aquele termo que eu falei para vocês. Ele pega Pk, que é a primeira Key sublinhado e ele pega o nome da tabela. Tá vendo?
+
+369
+00:44:31.900 --> 00:44:34.559
+Kadu Gertners: Ó distrito dois mil e vinte,
+
+370
+00:44:35.990 --> 00:44:50.179
+Kadu Gertners: distrito dois mil e vinte. Então, isso aqui é a chave primária da tabela. Distrito dois mil e vinte. Como ele está? A primeira está vinculada somente a uma coluna.
+
+371
+00:44:50.810 --> 00:45:01.099
+Kadu Gertners: Então, nesse caso, a tabela tem a chave primária somente vinculada a uma coluna.
+
+372
+00:45:01.520 --> 00:45:05.489
+Kadu Gertners: Quando você quer criar uma chave primária
+
+373
+00:45:05.850 --> 00:45:11.999
+Kadu Gertners: que ela tem mais de uma coluna obrigatoriamente. Você tem que botar para a América aqui embaixo.
+
+374
+00:45:12.440 --> 00:45:20.289
+Kadu Gertners: Você teria que botar aqui e define aqui pra América. E entre parênteses, coloca Coluna um
+
+375
+00:45:21.140 --> 00:45:24.579
+Kadu Gertners: e depois a Coluna dois. Aqui, por exemplo,
+
+376
+00:45:25.300 --> 00:45:34.220
+Kadu Gertners: como nós só temos uma coluna. Nós podemos botar para a Merick do lado da coluna, que é a coluna Id.
+
+377
+00:45:35.030 --> 00:45:37.140
+Kadu Gertners: Tá bom, legal.
+
+378
+00:45:37.810 --> 00:45:43.060
+Kadu Gertners: Outra coluna escola sublinhada dois mil e vinte. É do tipo texto.
+
+379
+00:45:43.200 --> 00:45:47.389
+Kadu Gertners: E aí, olha que legal. Nós vamos criar uma segunda tabela,
+
+380
+00:45:47.680 --> 00:45:51.280
+Kadu Gertners: que é a Distrito dois mil e trinta e cinco. Repara,
+
+381
+00:45:51.430 --> 00:46:02.490
+Kadu Gertners: tem uma que é de dois mil e vinte, a outra de dois mil e trinta e cinco. Vamos embora. Aí mesma coisa. A coluna Id é do tipo inteiro.
+
+382
+00:46:02.630 --> 00:46:06.290
+Kadu Gertners: Será criada uma constrente. Uma restrição
+
+383
+00:46:06.670 --> 00:46:12.170
+Kadu Gertners: será definida a Pk para Meriti, agora da tabela.
+
+384
+00:46:12.430 --> 00:46:14.709
+Kadu Gertners: Distrito dois mil e vinte e cinco.
+
+385
+00:46:15.860 --> 00:46:17.050
+Kadu Gertners: Beleza
+
+386
+00:46:17.220 --> 00:46:26.719
+Kadu Gertners: que é a primeiriqu também a coluna Id e a segunda coluna é a coluna escola sublinhada dois mil e trinta e cinco, que é um texto
+
+387
+00:46:27.390 --> 00:46:32.560
+Kadu Gertners: beleza. Vamos pegar os comandos, vamos colocar para cá.
+
+388
+00:46:34.210 --> 00:46:35.240
+Kadu Gertners: Opa,
+
+389
+00:46:40.340 --> 00:46:41.180
+Kadu Gertners: e aí,
+
+390
+00:46:44.770 --> 00:46:46.170
+Kadu Gertners: beleza? Vamos.
+
+391
+00:46:46.380 --> 00:46:49.270
+Kadu Gertners: Podemos selecionar as duas de uma vez.
+
+392
+00:46:52.460 --> 00:46:58.250
+Kadu Gertners: E aqui. Ó, você vai reparar que vão passar a ter mais duas tabelas aqui. Olha lá,
+
+393
+00:46:59.300 --> 00:47:02.539
+Kadu Gertners: beleza a distrito dois mil e vinte
+
+394
+00:47:02.910 --> 00:47:05.999
+Kadu Gertners: e a distrito dois mil e treze e cinto.
+
+395
+00:47:06.530 --> 00:47:07.920
+Kadu Gertners: Maravilha.
+
+396
+00:47:08.420 --> 00:47:11.790
+Kadu Gertners: E aí. Ó, vamos pegar.
+
+397
+00:47:12.630 --> 00:47:18.610
+Kadu Gertners: Dá um Select nessas tabelas em cada uma delas,
+
+398
+00:47:20.590 --> 00:47:26.739
+Kadu Gertners: para ver se tem algum conteúdo, como nós não inserimos nenhum registro
+
+399
+00:47:26.990 --> 00:47:29.540
+Kadu Gertners: ou não, fizemos carga de dados.
+
+400
+00:47:29.850 --> 00:47:33.550
+Kadu Gertners: Ambas as tabelas estão vazias.
+
+401
+00:47:36.030 --> 00:47:41.440
+Kadu Gertners: Beleza aí. Agora nós vamos fazer um insert para a primeira tabela.
+
+402
+00:47:41.570 --> 00:47:50.200
+Kadu Gertners: Galera. Repara, o inset da primeira tem quatro registros que são os números
+
+403
+00:47:50.620 --> 00:48:00.400
+Kadu Gertners: dois, cinco e seis, respectivamente, com esses nomes aqui Oak Roosevelt Dover Web Tuck.
+
+404
+00:48:01.070 --> 00:48:09.519
+Kadu Gertners: Ok, e aí na segunda tabela, reparem que eu botei mesmo o um.
+
+405
+00:48:09.710 --> 00:48:17.119
+Kadu Gertners: O a que aqui, ó, é o mesmo nome. Então ó dois, aqui, ó Roosevelt é o mesmo nome.
+
+406
+00:48:17.550 --> 00:48:24.060
+Kadu Gertners: Beleza aqui, ó embaixo ele tem o três tem o quatro e não tem o cinco, tá vendo?
+
+407
+00:48:24.260 --> 00:48:28.840
+Kadu Gertners: E os seis aqui tem nos dois. Então é literalmente isso.
+
+408
+00:48:28.950 --> 00:48:35.020
+Kadu Gertners: Os números iguais entre as duas tabelas é que tem o mesmo nome da escola.
+
+409
+00:48:35.770 --> 00:48:38.230
+Kadu Gertners: Beleza é esse intuito mesmo.
+
+410
+00:48:38.650 --> 00:48:54.220
+Kadu Gertners: Então, vamos embora. Vamos pegar os dois. Insert, copia, trazemos para cá vamos pegar o primeiro inserte.
+
+411
+00:48:54.320 --> 00:48:55.830
+Kadu Gertners: Maravilha.
+
+412
+00:48:56.000 --> 00:49:03.440
+Kadu Gertners: Inserimos quatro registros e para o segundo Insert, inserimos cinco registros.
+
+413
+00:49:05.630 --> 00:49:14.460
+Kadu Gertners: Maravilha, caduzon. Podemos pegar e dar um Select nas tabelas. Aí, agora que tem dados. Lógico, ó
+
+414
+00:49:17.240 --> 00:49:22.499
+Kadu Gertners: Select, para pegar todas as colunas da tabela. Distrito dois mil e vinte,
+
+415
+00:49:22.670 --> 00:49:26.239
+Kadu Gertners: Opa tem quatro registros aí, bonitinho
+
+416
+00:49:26.780 --> 00:49:29.620
+Kadu Gertners: e na Distrito dois mil treze e cinto.
+
+417
+00:49:29.750 --> 00:49:32.330
+Kadu Gertners: Tem cinco registros
+
+418
+00:49:35.330 --> 00:49:37.020
+Kadu Gertners: legal aí.
+
+419
+00:49:37.710 --> 00:49:41.240
+Kadu Gertners: Aqui vai começar de novo o vínculo das tabelas.
+
+420
+00:49:41.400 --> 00:49:55.140
+Kadu Gertners: Então repara aqui. Nós vamos dar um Select de todas as colunas a partir da tabela. Distrito dois mil e vinte. Será feito um Join com a tabela. Distrito dois mil e trinta e cinco,
+
+421
+00:49:55.230 --> 00:50:05.599
+Kadu Gertners: onde nós vamos fazer o seguinte. Na tabela, distrito dois mil e vinte. Nós vamos pegar a coluna Id e vamos igualar
+
+422
+00:50:06.300 --> 00:50:11.900
+Kadu Gertners: com a tabela. Distrito dois mil e trinta e cinco, também com a coluna Id
+
+423
+00:50:12.510 --> 00:50:18.650
+Kadu Gertners: e vamos ordenar pela tabela. Distritodois mil e vinte Id.
+
+424
+00:50:19.090 --> 00:50:20.960
+Kadu Gertners: Pega o Comando.
+
+425
+00:50:21.840 --> 00:50:26.389
+Kadu Gertners: Traz para cá e executa.
+
+426
+00:50:28.010 --> 00:50:30.100
+Kadu Gertners: Ó está vendo
+
+427
+00:50:30.420 --> 00:50:47.199
+Kadu Gertners: esse aqui. Ó, foi o que vocês perguntaram, caduzão. Quando nós pegamos aqui, ele pegou os valores que existem em ambas as tabelas, não foi? Foi? Como é que nós estamos comprovando isso? É só você com carinho. Olhar aqui para a tela.
+
+428
+00:50:47.450 --> 00:50:50.219
+Kadu Gertners: Ó o id um Id um
+
+429
+00:50:50.320 --> 00:50:54.679
+Kadu Gertners: ai de dois. Ai de dois. Ai de seis. Ai de seis
+
+430
+00:50:55.140 --> 00:51:00.399
+Kadu Gertners: são os valores em comum que aparecem nas duas tabelas.
+
+431
+00:51:01.740 --> 00:51:02.890
+Kadu Gertners: Beleza.
+
+432
+00:51:03.040 --> 00:51:03.939
+Kadu Gertners: Bom dia.
+
+433
+00:51:04.180 --> 00:51:13.940
+Kadu Gertners: O mesmo comando com o mesmo resultado. Se ao invés de Join, nós usarmos o Inner Joy,
+
+434
+00:51:15.500 --> 00:51:22.599
+Kadu Gertners: então, ó, repara que o comando é igualzinho. Select asterístico From, Distrito dois mil e vinte
+
+435
+00:51:22.800 --> 00:51:41.910
+Kadu Gertners: aqui, que muda só Join, distrito dois mil e trinta e cinco. E aqui Nerdjoin, distrito dois mil e trinta e cinco. Mas o One igualzinho. Ó distrito dois mil e vinte, Id igual a distrito dois mil e trinta e cinco Id igualzinho. E o Order by também. Igual
+
+436
+00:51:42.090 --> 00:51:46.759
+Kadu Gertners: distrito sublinhado dois mil e vinte Id, que é igual a esse de baixo.
+
+437
+00:51:47.610 --> 00:51:52.960
+Kadu Gertners: Então pegamos esse comando, trazemos para cá
+
+438
+00:51:57.060 --> 00:51:58.709
+Kadu Gertners: e vamos executá lo.
+
+439
+00:52:01.070 --> 00:52:12.659
+Kadu Gertners: Ó, o mesmo resultado, beleza, vamos lá, aí, ó, existe uma outra forma
+
+440
+00:52:13.270 --> 00:52:31.550
+Kadu Gertners: de fazer o Join das tabelas, que é uma forma que, na prática, não é muito usada, mas o comando funciona em vários Lgbds relacionais. Então é o select com asterisco para pegar as colunas de todas as tabelas vinculadas ao comando.
+
+441
+00:52:31.580 --> 00:52:40.850
+Kadu Gertners: Ó menciona distrito dois mil e vinte, Join ligando com o distrito dois mil e trinta e cinco. E esse vínculo
+
+442
+00:52:40.930 --> 00:52:49.890
+Kadu Gertners: ocorrerá usando a coluna Id de ambas as tabelas.
+
+443
+00:52:50.290 --> 00:52:59.519
+Kadu Gertners: Então é sabido que o nome da coluna é igual nas duas tabelas. Então você pode usar essa sintaxe aqui.
+
+444
+00:52:59.890 --> 00:53:01.870
+Kadu Gertners: Order by.
+
+445
+00:53:02.090 --> 00:53:06.670
+Kadu Gertners: Mais uma vez pela tabela. Distritodois mil e vinte Id.
+
+446
+00:53:07.550 --> 00:53:14.230
+Kadu Gertners: Pega o comando, coloca para cá e executa.
+
+447
+00:53:14.700 --> 00:53:17.930
+Kadu Gertners: Ó está vendo?
+
+448
+00:53:18.890 --> 00:53:25.430
+Kadu Gertners: E ele aqui. Só mostrou o Id uma vez. Está vendo essa sintaxe? Ele mostra o Id somente uma vez.
+
+449
+00:53:27.590 --> 00:53:35.100
+Kadu Gertners: Maravilha, ó legal! Agora olha que maneiro. O que vai acontecer agora?
+
+450
+00:53:35.290 --> 00:53:40.480
+Kadu Gertners: Ele vai fazer um select de todas as colunas. Tá bom. Até aí tudo bem.
+
+451
+00:53:40.760 --> 00:53:46.889
+Kadu Gertners: Ele vai fazer um froome da primeira tabela, que é distrito dois mil e vinte. Só que Ué
+
+452
+00:53:48.140 --> 00:53:54.629
+Kadu Gertners: caduzão tem um Last Join. O que é o Left, Joey Left Join Left significa esquerda.
+
+453
+00:53:55.050 --> 00:54:01.469
+Kadu Gertners: Então ele vai fazer o seguinte. Ele vai fazer um Join entre as duas tabelas, os valores em comum.
+
+454
+00:54:01.810 --> 00:54:09.239
+Kadu Gertners: Só que ele vai pegar o left. Os valores a mais na tabela que está do lado esquerdo.
+
+455
+00:54:09.760 --> 00:54:17.469
+Kadu Gertners: Então ó a tabela do lado esquerdo no comando. É a tabela. Distrito dois mil e vinte,
+
+456
+00:54:18.340 --> 00:54:27.279
+Kadu Gertners: beleza. E aí ele vai fazer um Lastjoin com a tabela. Distrito dois mil e trinta e cinco. Então, além de mostrar
+
+457
+00:54:27.430 --> 00:54:37.930
+Kadu Gertners: os valores em comum das duas tabelas, ele mostrará também os valores a mais da coluna
+
+458
+00:54:38.140 --> 00:54:47.460
+Kadu Gertners: da tabela que está à esquerda, que no nosso caso, é o Distrito dois mil e vinte. Vamos fazer um teste.
+
+459
+00:54:47.850 --> 00:54:57.430
+Kadu Gertners: Pega o comando maravilha coloca para cá e executa.
+
+460
+00:54:58.370 --> 00:55:08.500
+Kadu Gertners: Reparem que na primeira tabela existe um valor a mais que é o cinco Dover Middle School.
+
+461
+00:55:08.940 --> 00:55:20.009
+Kadu Gertners: Só que na tabela dois não existem os valores. E aí, como é que o banco representa isso? Caldozon? Ele representa isso para nós, mostrando nu
+
+462
+00:55:20.490 --> 00:55:38.390
+Kadu Gertners: nu e nulo, indicando que não existe um valor para essas colunas correspondentes ao registro cinco aqui da Escola Dover. Aqui não tem um correspondente na segunda tabela, que é a tabela. Distrito dois mil e trinta e cinco.
+
+463
+00:55:39.960 --> 00:55:45.020
+Kadu Gertners: Beleza, bom caldzão.
+
+464
+00:55:45.020 --> 00:55:45.390
+gabriel.diniz: Eu sei.
+
+465
+00:55:45.390 --> 00:55:47.449
+Kadu Gertners: Oi, fala comigo.
+
+466
+00:55:47.730 --> 00:55:48.500
+Kadu Gertners: Pode falar.
+
+467
+00:55:48.500 --> 00:56:05.330
+gabriel.diniz: Eu tinha falado ali no chat em relação ao Join. O Inerjoy. Só pegar os dados das tabelas com relação no caso ali, eu me retratei errado no caso. O que eu estava querendo dizer era que tinha o Full Join e o Inerjoy,
+
+468
+00:56:05.510 --> 00:56:07.630
+gabriel.diniz: que eu tinha dado uma olhada.
+
+469
+00:56:07.630 --> 00:56:10.630
+Kadu Gertners: O Full Join é outra coisa.
+
+470
+00:56:10.990 --> 00:56:20.060
+gabriel.diniz: Isso aí. Eu tentei falar que era esse Full Joy no caso, ele pegaria os dados com e sem relação da esquerda e da direita. No caso.
+
+471
+00:56:20.230 --> 00:56:27.710
+Kadu Gertners: É o full full a palavra fu L L significa cheio completo, por exemplo.
+
+472
+00:56:28.250 --> 00:56:34.970
+Kadu Gertners: Então, realmente sim, é o que você já falou um pouquinho. Você vai pegar todos os valores possíveis,
+
+473
+00:56:36.540 --> 00:56:39.460
+Kadu Gertners: mas a gente vai falar. Isso vai ter o comando aí.
+
+474
+00:56:40.650 --> 00:56:41.770
+gabriel.diniz: Valeu, valeu.
+
+475
+00:56:42.090 --> 00:56:42.960
+Kadu Gertners: Tá bom.
+
+476
+00:56:49.810 --> 00:57:00.670
+Kadu Gertners: Mateus ramos. Como é que você. Ok, maravilha. Como é que você vai usar a restrição que é a constrente.
+
+477
+00:57:01.110 --> 00:57:12.130
+Kadu Gertners: A constrente é usada. A constrente é igual à restrição. Mateus ramos é igual constrente. É igual à restrição.
+
+478
+00:57:12.360 --> 00:57:17.469
+Kadu Gertners: Quando você pode usar uma restrição para definir uma chave primária.
+
+479
+00:57:18.060 --> 00:57:20.959
+Kadu Gertners: Para definir uma chave estrangeira.
+
+480
+00:57:21.350 --> 00:57:31.079
+Kadu Gertners: E aí, a definição da chave estrangeira é para quê, Matheus ramos para você botar uma tabela a tabela mãe para conversar com uma tabela filha. Por exemplo.
+
+481
+00:57:31.310 --> 00:57:44.270
+Kadu Gertners: Então você permite que através da tabela mãe de uma coluna. Você vai botar a tabela filha através de uma coluna também para elas conversarem entre si.
+
+482
+00:57:45.090 --> 00:58:01.980
+Kadu Gertners: Além disso, também é considerada uma constrente ou uma restrição Mateus Ramos, aquele que eu te falei para vocês no início da aula chamado Unic, que é o valor único. Ele também é uma constrente ou uma restrição.
+
+483
+00:58:02.900 --> 00:58:15.179
+Kadu Gertners: Tudo bem, amigo. São nesses contextos que você vai usar um outro contexto. Você pode definir uma constrente ou uma restrição para uma coluna. Quando você fala que ela é note nu,
+
+484
+00:58:15.600 --> 00:58:33.570
+Kadu Gertners: isso significa que, na prática, quando você fizer o inset para aquela coluna que ela foi definida como not new. Aquela coluna no momento do Insert. Aquele valor para aquela coluna tem que ser preenchido de forma obrigatória.
+
+485
+00:58:34.450 --> 00:58:38.100
+Kadu Gertners: Aquele valor tem que ser preenchido de forma obrigatória.
+
+486
+00:58:40.080 --> 00:58:40.750
+Kadu Gertners: Tá bom.
+
+487
+00:58:41.660 --> 00:58:57.989
+Matheus Ramos: Então a constrente. Eu só vou usar ela quando eu estiver criando uma tabela no caso, porque aí eu vou definir uma chave primária ou uma estrangeira. No caso. É só na criação de tabela que dá para fazer isso.
+
+488
+00:58:58.390 --> 00:59:00.240
+Kadu Gertners: Cara? Ótima pergunta.
+
+489
+00:59:00.540 --> 00:59:09.730
+Kadu Gertners: Não é? Só nesse caso, você pode, dependendo do Sgbd que você use, você pode criar a tabela primeiro
+
+490
+00:59:09.940 --> 00:59:23.250
+Kadu Gertners: e depois Mateus. Você usa um comando chamado altertable, que o altertable daquela tabela que já exista, você pode adicionar uma constrente que pode ser uma premiere Key.
+
+491
+00:59:23.300 --> 00:59:34.029
+Kadu Gertners: Você pode adicionar uma constante que pode ser uma forem Key também você pode adicionar uma forem Key, que também pode ser um valor único. Não tem problema,
+
+492
+00:59:35.120 --> 00:59:36.660
+Kadu Gertners: entendeu? Mas isso.
+
+493
+00:59:36.660 --> 00:59:37.050
+Matheus Ramos: E.
+
+494
+00:59:37.050 --> 00:59:38.310
+Kadu Gertners: E do banco de lados.
+
+495
+00:59:38.570 --> 00:59:39.820
+Kadu Gertners: Sem problema.
+
+496
+00:59:43.440 --> 00:59:45.330
+Kadu Gertners: Maravilha, vamos lá.
+
+497
+00:59:45.540 --> 00:59:49.600
+Kadu Gertners: Isso aí, galera perguntando. É isso aí, ó, vamos seguir.
+
+498
+00:59:50.310 --> 00:59:52.340
+Kadu Gertners: Bom, aí
+
+499
+00:59:53.300 --> 01:00:04.330
+Kadu Gertners: tá. Eu tô no left, Join. Aqui, beleza, tá, caduzão. Vamos pegar o right Join, cara, o right, Join. Ele é o oposto do Left. O Left é esquerda.
+
+500
+01:00:04.440 --> 01:00:07.289
+Kadu Gertners: Então o Wright é a direita.
+
+501
+01:00:07.370 --> 01:00:13.369
+Kadu Gertners: Então o comando aqui select asterisco de todas as colunas
+
+502
+01:00:13.430 --> 01:00:28.049
+Kadu Gertners: a partir da tabela. Distrito dois mil e vinte, ele fará um right, Join. Quer dizer, ele fará uma ligação à direita, pegando os valores a mais da tabela. Distrito dois mil e trinta e cinco.
+
+503
+01:00:28.400 --> 01:00:36.480
+Kadu Gertners: E a ligação das duas tabelas acontecerá a partir da Tabela,
+
+504
+01:00:36.770 --> 01:00:38.950
+Kadu Gertners: Distrito dois mil e trinta e cinco.
+
+505
+01:00:39.310 --> 01:00:47.929
+Kadu Gertners: A coluna Id. Igualando com a tabela. Distrito dois mil e vinte, a Coluna Id.
+
+506
+01:00:48.120 --> 01:00:55.689
+Kadu Gertners: E nós vamos ordenar pela tabela. Distrito dois mil e trinta e cinco através da coluna Id.
+
+507
+01:00:55.950 --> 01:01:04.360
+Kadu Gertners: Ó, pegamos o comando, colocamos para cá e vamos executar.
+
+508
+01:01:05.720 --> 01:01:09.600
+Kadu Gertners: Ó, ele executou a direita.
+
+509
+01:01:09.680 --> 01:01:21.409
+Kadu Gertners: Tá vendo aqui a tabela direita, que era a distrito é dois mil e trinta e cinco. Ó foram pegos os valores a mais dela, que é o valor três e quatro.
+
+510
+01:01:21.410 --> 01:01:30.630
+Kadu Gertners: Então o valor três e quatro aqui, como nós estamos vendo lá direito existe só na tabela que está a mais do lado direito.
+
+511
+01:01:31.150 --> 01:01:48.879
+Kadu Gertners: Os valores correspondentes três e quatro não existem na tabela que está à esquerda, que é a tabela distrito dois mil e vinte. Então, o que ele faz? Ele coloca isso aqui. Como ele não tem nenhum valor para representar.
+
+512
+01:01:49.080 --> 01:01:53.170
+Kadu Gertners: Ele coloca o valor né? Nu,
+
+513
+01:01:53.520 --> 01:01:57.470
+Kadu Gertners: que significa? Não significa ausência de valor.
+
+514
+01:01:59.780 --> 01:02:02.270
+Kadu Gertners: E aí, beleza?
+
+515
+01:02:03.890 --> 01:02:10.949
+Kadu Gertners: Ainda podemos usar como o amigo comentou podemos usar.
+
+516
+01:02:11.120 --> 01:02:27.799
+Kadu Gertners: O Full Alter Join. Então vamos selecionar todas as colunas a partir da tabela. Distrito dois mil e vinte. E aqui o nosso Join, mais uma vez, será feito com a tabela. Distrito dois mil e trinta e cinco. Porém,
+
+517
+01:02:27.900 --> 01:02:32.319
+Kadu Gertners: tem isso aqui escrito full significa completo
+
+518
+01:02:32.590 --> 01:02:38.450
+Kadu Gertners: e halter significa o oposto de interno. É externo.
+
+519
+01:02:38.730 --> 01:02:50.269
+Kadu Gertners: Então, Halter é externo. Eu vou pegar todos os valores a mais, seja do lado esquerdo, ou seja, do lado direito. Eu vou mostrar todos os valores.
+
+520
+01:02:50.650 --> 01:02:56.039
+Kadu Gertners: Aí ele faz a ligação entre as tabelas através da coluna Id.
+
+521
+01:02:56.660 --> 01:03:03.709
+Kadu Gertners: E ele ordena pela tabela. Distrito dois mil e vinte através da coluna Id.
+
+522
+01:03:04.220 --> 01:03:07.809
+Kadu Gertners: Olha como é que vai ficar esse comando. Vamos botar aqui.
+
+523
+01:03:09.570 --> 01:03:16.700
+Kadu Gertners: E aí, ó, selecionamos o comando e executa. Olha lá,
+
+524
+01:03:17.760 --> 01:03:19.679
+Kadu Gertners: olha como é que fica. Claro?
+
+525
+01:03:19.850 --> 01:03:26.259
+Kadu Gertners: Está vendo o valor três e quatro só existe na tabela. À direita.
+
+526
+01:03:26.730 --> 01:03:28.830
+Kadu Gertners: Não existe na tabela esquerda
+
+527
+01:03:29.340 --> 01:03:41.539
+Kadu Gertners: o valor um existe nas duas tabelas. O valor dois existe nas duas tabelas. Opa. O valor cinco só existe na tabela à esquerda
+
+528
+01:03:41.730 --> 01:03:44.339
+Kadu Gertners: e não existe na tabela direita.
+
+529
+01:03:44.950 --> 01:03:48.880
+Kadu Gertners: E o valor seis existe nas duas tabelas.
+
+530
+01:03:50.400 --> 01:03:58.070
+Kadu Gertners: Galera é, na prática, mesmo do dia a dia. O comando mais usado é o Inner Joy,
+
+531
+01:03:58.250 --> 01:04:14.109
+Kadu Gertners: que é a ligação interna que todos os valores batem. O segundo mais usado é o Left. Join. Você quer pegar os valores iguais das duas tabelas e os valores a mais da tabela do lado esquerdo.
+
+532
+01:04:15.320 --> 01:04:33.870
+Kadu Gertners: Tá bom. Ah, Cadu. Mas eu estou usando Left Joel Right. Join, eu posso reverter aqui a posição das colunas da tabela. Lógico, você pode botar o Distrito dois mil e trinta e cinco para cima e botar o Distrito dois mil e vinte para baixo. Não tem problema nenhum.
+
+533
+01:04:35.230 --> 01:04:39.100
+Kadu Gertners: Beleza, beleza.
+
+534
+01:04:39.580 --> 01:04:40.950
+Kadu Gertners: Vamos seguir.
+
+535
+01:04:41.680 --> 01:04:45.260
+Kadu Gertners: Ó, aqui tem um outro comando
+
+536
+01:04:46.100 --> 01:04:49.290
+Kadu Gertners: que ele também quase não é usado, mas existe.
+
+537
+01:04:51.970 --> 01:04:54.560
+Kadu Gertners: Que é o select de todas as colunas
+
+538
+01:04:56.240 --> 01:04:59.329
+Kadu Gertners: a partir da Tabela distrito dois mil e vinte
+
+539
+01:04:59.630 --> 01:05:08.580
+Kadu Gertners: fazendo um Crossjoy. Quer dizer um Join cruzado com a tabela. Distrito dois mil e trinta e cinco.
+
+540
+01:05:08.700 --> 01:05:14.670
+Kadu Gertners: Repara só quando ele faz isso. Repara que ele não está nem explicitando
+
+541
+01:05:14.800 --> 01:05:31.040
+Kadu Gertners: qual é a coluna de uma tabela com a outra. Por quê? Porque ele vai cruzar todos os valores de uma tabela com a outra. Então olha que legal! Aí ele vai ordenar isso pelo Distrito dois mil e vinte, Id, vírgula e Distrito dois mil e trinta e cinco Id.
+
+542
+01:05:31.170 --> 01:05:32.399
+Kadu Gertners: Então vamos lá.
+
+543
+01:05:33.210 --> 01:05:39.110
+Kadu Gertners: Ele vai pegar o comando aqui, colocar para cá e executar.
+
+544
+01:05:39.780 --> 01:05:40.690
+Kadu Gertners: Ó,
+
+545
+01:05:41.750 --> 01:05:50.199
+Kadu Gertners: repare que aqui ele faz o seguinte. Se uma tabela tem quatro registros e a outra tabela tem cinco,
+
+546
+01:05:50.430 --> 01:05:56.540
+Kadu Gertners: e você está falando para nós, caduzon, que ele vai combinar
+
+547
+01:05:56.830 --> 01:06:02.800
+Kadu Gertners: todos os valores de uma tabela com a outra. É uma conta de multiplicação simples.
+
+548
+01:06:02.990 --> 01:06:10.760
+Kadu Gertners: Se uma tabela tem quatro registros, a outra cinco é só multiplicar quatro vezes. Cinco vão dar vinte registros.
+
+549
+01:06:10.870 --> 01:06:17.700
+Kadu Gertners: Ele fez todas as combinações possíveis da primeira tabela com a segunda tabela.
+
+550
+01:06:18.590 --> 01:06:25.169
+Kadu Gertners: Beleza, ó, os vinte valores possíveis.
+
+551
+01:06:27.390 --> 01:06:31.470
+Kadu Gertners: Maravilha, vamos seguir.
+
+552
+01:06:31.970 --> 01:06:42.120
+Kadu Gertners: Ó, podemos de novo conferir todos os registros da tabela. Distrito dois mil e vinte.
+
+553
+01:06:43.180 --> 01:06:44.570
+Kadu Gertners: Quatro registros.
+
+554
+01:06:45.860 --> 01:06:48.490
+Kadu Gertners: Todos os registros da tabela Opa
+
+555
+01:06:49.480 --> 01:06:58.590
+Kadu Gertners: dois mil e trinta e cinco, que são cinco registros, beleza.
+
+556
+01:06:59.200 --> 01:07:08.700
+Kadu Gertners: Bom, reparem. Caduzon. Eu posso fazer um Select de todas as colunas a partir da tabela.
+
+557
+01:07:08.930 --> 01:07:26.709
+Kadu Gertners: Distrito dois mil e vinte, fazer um Left Join do distrito dois mil e trinta e cinco. E olha que maneiro! Eu vou fazer um Join entre as colunas Id de ambas as tabelas. Só que na cláusula uer eu vou falar assim. Olha,
+
+558
+01:07:26.750 --> 01:07:33.600
+Kadu Gertners: é quando o Distrito sublinhado dois mil e trinta e cinco, ele for nulo,
+
+559
+01:07:33.720 --> 01:07:42.989
+Kadu Gertners: então eu só quero pegar quando ele for exatamente os valores que só existem na tabela à esquerda.
+
+560
+01:07:43.250 --> 01:07:47.210
+Kadu Gertners: Então, ó, eu pego esse comando.
+
+561
+01:07:47.450 --> 01:07:49.160
+Kadu Gertners: Olha que interessante.
+
+562
+01:07:49.620 --> 01:07:58.279
+Kadu Gertners: Só vou pegar os valores nesse comando dos valores que só existem para a esquerda. Então o único valor
+
+563
+01:07:58.940 --> 01:08:01.980
+Kadu Gertners: que só existe na tabela.
+
+564
+01:08:02.540 --> 01:08:11.520
+Kadu Gertners: A esquerda, que é a tabela. Distrito dois mil e vinte é o valor cinco. É o Id5 Beleza.
+
+565
+01:08:14.040 --> 01:08:14.929
+Kadu Gertners: Bom dia.
+
+566
+01:08:16.050 --> 01:08:25.010
+Kadu Gertners: Podemos pegar e selecionar, fazer só da coluna Id, fazendo um Froome com a tabela Distrito dois mil e vinte,
+
+567
+01:08:25.140 --> 01:08:30.249
+Kadu Gertners: fazendo um Lastjoin com a tabela. Distrito dois mil e trinta e cinco.
+
+568
+01:08:30.590 --> 01:08:42.019
+Kadu Gertners: E juntando as duas tabelas através da coluna Id, pega o comando, coloco para cá e executo.
+
+569
+01:08:42.609 --> 01:08:43.490
+Kadu Gertners: Olha lá.
+
+570
+01:08:44.630 --> 01:08:55.890
+Kadu Gertners: Aqui ele tem um problema. Ele fala. Se você não especifica o nome da tabela
+
+571
+01:08:56.029 --> 01:09:11.149
+Kadu Gertners: e existe um nome de uma coluna que exista nas duas tabelas. Ele dá essa mensagem de erro aqui, olha, poxa. A coluna Id existe nas duas tabelas.
+
+572
+01:09:11.250 --> 01:09:25.000
+Kadu Gertners: Então, para mim, está sendo ambíguo. Você não explicou de qual coluna? De qual tabela que você quer? A coluna, então ele dá essa mensagem de erro aqui, conforme eu estou mostrando para vocês.
+
+573
+01:09:26.520 --> 01:09:29.180
+Kadu Gertners: Beleza para resolver isso.
+
+574
+01:09:29.420 --> 01:09:33.000
+Kadu Gertners: Tranquilo, é só você botar não é
+
+575
+01:09:33.649 --> 01:09:36.820
+Kadu Gertners: o prefixo aqui de uma das tabelas.
+
+576
+01:09:37.189 --> 01:09:40.920
+Kadu Gertners: Quando você fizer isso, ele não vai dar mais erro.
+
+577
+01:09:41.220 --> 01:09:44.689
+Kadu Gertners: Ó beleza
+
+578
+01:09:48.500 --> 01:09:55.719
+Kadu Gertners: legal aqui nós podemos
+
+579
+01:09:56.130 --> 01:10:05.809
+Kadu Gertners: botar explicitamente, né? Aqui eu estou botando explicitamente o nome das colunas. Ó distritodois mil e vinte Id,
+
+580
+01:10:06.190 --> 01:10:13.259
+Kadu Gertners: distrito dois mil e vinte, Escola dois mil e vinte e Distrito dois mil e trinta e cinco. Escola dois mil e trinta e cinco.
+
+581
+01:10:13.830 --> 01:10:17.480
+Kadu Gertners: Fazer o Join de novo com a Distrito dois mil e vinte
+
+582
+01:10:17.710 --> 01:10:21.330
+Kadu Gertners: Left Join com a Distrito dois mil e trinta e cinco.
+
+583
+01:10:21.550 --> 01:10:26.419
+Kadu Gertners: Vamos juntar as duas tabelas mais uma vez pela coluna Id
+
+584
+01:10:26.560 --> 01:10:35.090
+Kadu Gertners: e vamos ordenar pela tabela. Distrito dois mil e vinte. A coluna Id Bora pega o comando,
+
+585
+01:10:36.660 --> 01:10:39.950
+Kadu Gertners: coloca para cá e executa.
+
+586
+01:10:40.830 --> 01:10:44.400
+Kadu Gertners: Ó, ficou até melhor de ver. Assim.
+
+587
+01:10:44.800 --> 01:10:46.790
+Kadu Gertners: Na minha opinião, é melhor assim.
+
+588
+01:10:48.440 --> 01:10:51.390
+Kadu Gertners: Mas é uma decisão de cada um
+
+589
+01:10:51.780 --> 01:10:55.559
+Kadu Gertners: aqui nesse comando. O comando é igual.
+
+590
+01:10:56.080 --> 01:11:01.300
+Kadu Gertners: É feita uma ligação das duas tabelas. Repara que o comando
+
+591
+01:11:01.460 --> 01:11:08.119
+Kadu Gertners: aqui no Select na primeira parte do Select, eles são iguaizinhos.
+
+592
+01:11:08.480 --> 01:11:13.460
+Kadu Gertners: Ó, aqui, aqui, aqui
+
+593
+01:11:14.000 --> 01:11:25.569
+Kadu Gertners: e aqui. Eles são iguaizinhos. Mas o que ele fez de diferente? Caduzon, ele botou um apelido. Ó essa coluna sendo mostrada como D20 sublinhada e D
+
+594
+01:11:25.790 --> 01:11:26.950
+Kadu Gertners: aqui
+
+595
+01:11:27.160 --> 01:11:38.139
+Kadu Gertners: D20 sublinhado Shh de escola sublinhado dois mil e vinte e D23cinco, sublinhado Shh dois mil e trinta e cinco.
+
+596
+01:11:38.290 --> 01:11:41.670
+Kadu Gertners: Mas a resposta será igual.
+
+597
+01:11:42.090 --> 01:11:46.340
+Kadu Gertners: Ó, a resposta será igual.
+
+598
+01:11:47.790 --> 01:11:51.149
+Kadu Gertners: Ele só vai mudar aqui o nome das colunas.
+
+599
+01:11:51.850 --> 01:11:56.140
+Kadu Gertners: Ó aqui! Ele só mudou o nome das colunas
+
+600
+01:11:57.170 --> 01:12:04.500
+Kadu Gertners: Cadu. Podemos botar um apelido aí separando com espaço. Podemos
+
+601
+01:12:04.640 --> 01:12:10.609
+Kadu Gertners: se, no momento de definirmos a coluna, colocarmos a coluna entre aspas.
+
+602
+01:12:11.070 --> 01:12:22.630
+Kadu Gertners: Então é o mesmo comando anterior. Vai mudar só o apelido. Vai tirar esse apelido e vai botar ó Distrito dois mil e vinte de
+
+603
+01:12:23.340 --> 01:12:30.560
+Kadu Gertners: vai mudar. D20sh dois mil e vinte. Vai botar District dois mil e vinte School
+
+604
+01:12:30.910 --> 01:12:35.230
+Kadu Gertners: vai mudar de trinta e cinco Shh, dois mil e trinta e cinco
+
+605
+01:12:35.410 --> 01:12:39.280
+Kadu Gertners: e vai botar distritos de dois mil e trinta e cinco School.
+
+606
+01:12:40.400 --> 01:12:46.380
+Kadu Gertners: Só isso que vai mudar. Vamos fazer o teste e aí
+
+607
+01:12:49.070 --> 01:12:52.290
+Kadu Gertners: só vai mudar de novo o cabeçalho.
+
+608
+01:12:53.250 --> 01:12:56.320
+Kadu Gertners: Olha lá, só mudou o cabeçalho,
+
+609
+01:12:59.410 --> 01:13:00.660
+Kadu Gertners: beleza.
+
+610
+01:13:01.370 --> 01:13:02.230
+Kadu Gertners: Bom,
+
+611
+01:13:02.860 --> 01:13:18.770
+Kadu Gertners: o último comando desse grupo aqui, caduzão. Eu posso botar um apelido para as tabelas. Também posso. Eu posso, ao invés de ficar representando como Distrito dois mil e vinte, eu dou um apelido para essa tabela, que é o D20
+
+612
+01:13:19.260 --> 01:13:29.709
+Kadu Gertners: para a Tabela, Distrito dois mil e trinta e cinco. Eu dou o apelido de trinta e cinco. Aqui será feito um Lastjoin entre as duas tabelas.
+
+613
+01:13:29.830 --> 01:13:36.580
+Kadu Gertners: Ele vai usar o apelido todas as vezes que ele mencionar a coluna D2id
+
+614
+01:13:36.700 --> 01:13:39.449
+Kadu Gertners: igual a D trinta e cinco Id.
+
+615
+01:13:39.760 --> 01:13:49.030
+Kadu Gertners: Vai ordenar pelo D20 Id e vai mostrar só os apelidos. Aqui D20 Id,
+
+616
+01:13:49.510 --> 01:13:55.230
+Kadu Gertners: D20 escola dois mil e vinte e d23cinco. Escola dois mil e trinta e cinco.
+
+617
+01:13:56.620 --> 01:14:01.040
+Kadu Gertners: Pega o comando e coloco para cá.
+
+618
+01:14:02.970 --> 01:14:11.390
+Kadu Gertners: Executa, ó tá bonitinho, cadu. Eu poderia botar um apelido
+
+619
+01:14:11.510 --> 01:14:20.899
+Kadu Gertners: aqui para essas colunas também eu posso dar ao mesmo tempo apelido para as tabelas e apelido para as colunas. Sim, pode.
+
+620
+01:14:23.270 --> 01:14:25.500
+Kadu Gertners: Beleza, pode. Não tem problema.
+
+621
+01:14:29.950 --> 01:14:34.900
+Kadu Gertners: Maravilha. Ó parte três.
+
+622
+01:14:35.260 --> 01:14:40.550
+Kadu Gertners: Vamos fazer o seguinte. Vamos criar uma tabela chamada Distrito dois mil e vinte inscrição
+
+623
+01:14:40.660 --> 01:14:46.559
+Kadu Gertners: nela terá a coluna Id do tipo inteiro e inscrição inteiro
+
+624
+01:14:46.850 --> 01:14:58.840
+Kadu Gertners: terá uma outra tabela. Distrito dois mil e vinte notas. E nós vamos pegar a coluna Id que é inteiro, e as notas que é varchar de dez.
+
+625
+01:14:59.070 --> 01:15:00.650
+Kadu Gertners: Maravilha.
+
+626
+01:15:00.860 --> 01:15:05.999
+Kadu Gertners: Pegamos as duas tabelas, puxamos para cá
+
+627
+01:15:06.580 --> 01:15:09.789
+Kadu Gertners: e vamos criar mais duas tabelas.
+
+628
+01:15:09.950 --> 01:15:11.960
+Kadu Gertners: Tem quatro tabelas.
+
+629
+01:15:12.830 --> 01:15:19.150
+Kadu Gertners: E agora ficarão quatro. Mais duas tabelas, seis tabelas,
+
+630
+01:15:22.210 --> 01:15:26.120
+Kadu Gertners: beleza, maravilha.
+
+631
+01:15:27.380 --> 01:15:31.369
+Kadu Gertners: Ó, vamos ver, caduzão o conteúdo das tabelas.
+
+632
+01:15:31.750 --> 01:15:41.319
+Kadu Gertners: Vamos lá, ó primeira tabela. Distrito dois mil e vinte. Inscrição, nenhum registro.
+
+633
+01:15:41.780 --> 01:15:52.749
+Kadu Gertners: Segunda tabela, distrito dois mil e vinte. Notas. Nenhum registro. Também não inserimos nenhum registro. Aí
+
+634
+01:15:53.700 --> 01:16:04.040
+Kadu Gertners: nós vamos pegar a primeira tabela e vamos inserir os registros um, o Id um, dois, cinco e seis,
+
+635
+01:16:06.280 --> 01:16:09.310
+Kadu Gertners: respectivamente, com esses valores de inscrição.
+
+636
+01:16:12.720 --> 01:16:17.920
+Kadu Gertners: E vamos pegar ó, e aí o incerte. Into
+
+637
+01:16:18.050 --> 01:16:31.349
+Kadu Gertners: vamos fazer um inset também com quatro registros também para a tabela. Distrito dois mil e vinte notas. Reparem que eu estou pegando exatamente os mesmos números, né? Ó um, duzentos e cinquenta e seis, cento e duzentos e cinquenta e seis.
+
+638
+01:16:31.550 --> 01:16:37.530
+Kadu Gertners: E aí, isso aqui são as notas K391dois seis mil oitocentos e noventa e doze.
+
+639
+01:16:38.070 --> 01:16:43.050
+Kadu Gertners: Então, ó, pegamos o comando os comandos.
+
+640
+01:16:43.170 --> 01:16:44.959
+Kadu Gertners: Pegamos os comandos.
+
+641
+01:16:46.000 --> 01:16:49.499
+Kadu Gertners: Vamos fazer os dois insights de uma vez só.
+
+642
+01:16:52.580 --> 01:17:05.570
+Kadu Gertners: Como eu peguei tudo de uma vez. Eram quatro registros de uma e quatro da outra. Quatro mais quatro. Ele inseriu de uma vez só oito registros, mas só que quatro registros em cada tabela.
+
+643
+01:17:07.170 --> 01:17:17.870
+Kadu Gertners: E aí, maravilha, ó, aqui podemos verificar
+
+644
+01:17:18.190 --> 01:17:20.910
+Kadu Gertners: o conteúdo das tabelas. Como é que elas ficaram?
+
+645
+01:17:22.240 --> 01:17:25.269
+Kadu Gertners: Primeiro da Distrito dois mil e vinte. Inscrição.
+
+646
+01:17:25.420 --> 01:17:27.819
+Kadu Gertners: Os quatro registros estão aqui.
+
+647
+01:17:28.610 --> 01:17:34.420
+Kadu Gertners: E o distrito dois mil e vinte notas. Os quatro registros também.
+
+648
+01:17:35.070 --> 01:17:36.830
+Kadu Gertners: Os quatro registros aqui.
+
+649
+01:17:37.620 --> 01:17:43.990
+Kadu Gertners: Beleza. Reparem, nós vamos fazer agora. Galera um,
+
+650
+01:17:45.400 --> 01:17:51.469
+Kadu Gertners: nós vamos fazer agora um Join com três Tabelas. Então repara,
+
+651
+01:17:51.620 --> 01:18:00.080
+Kadu Gertners: eu vou colocar o apelido D20 para a tabela. Distrito dois mil e vinte que nós criamos antes. Hoje
+
+652
+01:18:00.230 --> 01:18:13.790
+Kadu Gertners: vamos pegar a tabela. Distrito dois mil e vinte, inscrição que tem o apelido? En. Repara que a ligação dessas tabelas é feita pelo apelido D20 Id
+
+653
+01:18:14.000 --> 01:18:16.760
+Kadu Gertners: e pelo apelido, é N Id.
+
+654
+01:18:17.530 --> 01:18:18.460
+Kadu Gertners: Tá,
+
+655
+01:18:18.910 --> 01:18:29.150
+Kadu Gertners: faz se um Join com a terceira tabela que nós acabamos de criar agora também a Distrito dois mil e vinte notas, e ela terá o apelido Gr.
+
+656
+01:18:29.370 --> 01:18:35.330
+Kadu Gertners: Então, ó aqui a ligação será da tabela D20
+
+657
+01:18:35.480 --> 01:18:37.640
+Kadu Gertners: que é a primeira que aparece aqui
+
+658
+01:18:37.790 --> 01:18:53.900
+Kadu Gertners: através da coluna, id igualando com o apelido Id dessa tabela. Aqui dá notas, beleza. Aí vamos ordenar
+
+659
+01:18:54.080 --> 01:18:57.190
+Kadu Gertners: pelo apelido D20 Id.
+
+660
+01:18:57.500 --> 01:19:00.290
+Kadu Gertners: Então, ó, quando ele faz isso,
+
+661
+01:19:00.720 --> 01:19:11.929
+Kadu Gertners: pegamos e vão mostrar essas colunas, né? O D20 Id, o D20 escola dois mil e vinte o En Inscrição e o Grnotas
+
+662
+01:19:12.720 --> 01:19:14.540
+Kadu Gertners: copiamos o comando.
+
+663
+01:19:18.470 --> 01:19:20.059
+Kadu Gertners: Colocamos para cá
+
+664
+01:19:20.220 --> 01:19:34.229
+Kadu Gertners: e olha que maneiro ele aqui num comando só ele está pegando informações. De três tabelas em paralelo. Olha que maneiro. O lance do John é exatamente isso.
+
+665
+01:19:34.400 --> 01:19:45.229
+Kadu Gertners: Você poder potencializar de você pegar e mencionar mais colunas ao fazer o Join entre as tabelas. A ligação entre as tabelas.
+
+666
+01:19:47.340 --> 01:19:50.529
+Kadu Gertners: Maravilha aí, aqui, ó,
+
+667
+01:19:51.020 --> 01:19:58.809
+Kadu Gertners: ele faz um distint, pega o valor todo da Tabela. Distrito dois mil e vinte e dois mil e trinta e cinco.
+
+668
+01:19:59.270 --> 01:20:00.130
+Kadu Gertners: Ó
+
+669
+01:20:04.430 --> 01:20:09.589
+Kadu Gertners: distrito dois mil e vinte tem quatro registros
+
+670
+01:20:11.260 --> 01:20:13.310
+Kadu Gertners: e a dois mil e trinta e cinco.
+
+671
+01:20:14.170 --> 01:20:19.889
+Kadu Gertners: Tem cinco registros aí. Olha só. Que interessante.
+
+672
+01:20:20.440 --> 01:20:26.180
+Kadu Gertners: Nós podemos cadu fazer um Union das duas tabelas. Podemos?
+
+673
+01:20:26.300 --> 01:20:28.109
+Kadu Gertners: Então vamos ver como é que vai ficar
+
+674
+01:20:28.600 --> 01:20:42.329
+Kadu Gertners: quando nós botamos um Union para todas as colunas a partir da Distrito dois mil e vinte, com a distrito dois mil e trinta e cinco, fazendo uma união e ordenando pelo Idea. Olha como é que vai ficar o resultado.
+
+675
+01:20:44.410 --> 01:20:52.170
+Kadu Gertners: Ó, vou mostrar todos os resultados somente uma vez.
+
+676
+01:20:52.830 --> 01:20:56.330
+Kadu Gertners: Agora, qual é a diferença desse caduzão
+
+677
+01:20:56.810 --> 01:20:59.230
+Kadu Gertners: de nós botarmos o Union Wall?
+
+678
+01:20:59.390 --> 01:21:06.580
+Kadu Gertners: Se nós botarmos o Union Wall, ele será um pouco diferente. Por quê? Olha que interessante.
+
+679
+01:21:07.790 --> 01:21:11.650
+Kadu Gertners: O Union Wall pega os valores repetidos.
+
+680
+01:21:11.820 --> 01:21:21.800
+Kadu Gertners: Ele não vai pegar o valor só uma vez, ele vai pegar o valor todas as vezes que aquele valor aparecer. Ó, vamos comprovar.
+
+681
+01:21:22.140 --> 01:21:27.910
+Kadu Gertners: Pega o comando, executa ó, e reparem.
+
+682
+01:21:29.580 --> 01:21:32.810
+Kadu Gertners: Ó o um aparece duas vezes.
+
+683
+01:21:32.940 --> 01:21:35.140
+Kadu Gertners: Duas duas vezes.
+
+684
+01:21:35.290 --> 01:21:45.040
+Kadu Gertners: Três, uma vez, quatro, uma vez, cinco, uma vez e o seis, duas vezes. Isso significa, na prática, que o valor um,
+
+685
+01:21:45.200 --> 01:21:56.390
+Kadu Gertners: dois e seis. Nesse exemplo, eles encontram se nas duas tabelas, como nós vimos com os Joes, que nós fomos executando
+
+686
+01:21:57.830 --> 01:21:58.870
+Kadu Gertners: beleza.
+
+687
+01:22:00.690 --> 01:22:03.710
+Kadu Gertners: Bom caldozão.
+
+688
+01:22:04.750 --> 01:22:12.949
+Kadu Gertners: Nós podemos botar um Union aí all e botar um apelido, colocar uma coluna
+
+689
+01:22:13.250 --> 01:22:18.570
+Kadu Gertners: com um valor fixo que é o dois.dois0 para indicar o ano
+
+690
+01:22:19.450 --> 01:22:22.290
+Kadu Gertners: e colocar um dois mil e trinta e cinco
+
+691
+01:22:22.630 --> 01:22:26.410
+Kadu Gertners: para indicar um ano aqui da tabela.
+
+692
+01:22:26.670 --> 01:22:28.870
+Kadu Gertners: Distrito dois mil e trinta e cinco.
+
+693
+01:22:29.000 --> 01:22:37.280
+Kadu Gertners: E colocarmos o dois mil e vinte para representarmos a tabela. Distrito dois mil e vinte. União Uol, ó, olha que maneiro
+
+694
+01:22:37.520 --> 01:22:39.610
+Kadu Gertners: para você identificar melhor.
+
+695
+01:22:40.020 --> 01:22:44.199
+Kadu Gertners: Você pega esse comando, coloque ele para cá.
+
+696
+01:22:46.130 --> 01:22:51.879
+Kadu Gertners: Ele está mostrando a coluna dois mil e vinte para ano. Ele vai mostrar o nome da escola
+
+697
+01:22:52.740 --> 01:23:11.560
+Kadu Gertners: aqui para a Tabela. Distrito dois mil e vinte embaixo. Ele vai mostrar o ano dois mil e trinta e cinco Ear é ano. Vai mostrar a coluna escola dois mil e trinta e cinco a partir da tabela. Distrito dois mil e trinta e cinco. Vai ordenar pela coluna School,
+
+698
+01:23:11.870 --> 01:23:18.480
+Kadu Gertners: pela coluna Skull, não pelo apelido Skull aqui e pelo ano, vamos testar.
+
+699
+01:23:19.920 --> 01:23:21.210
+Kadu Gertners: Executa.
+
+700
+01:23:21.580 --> 01:23:24.520
+Kadu Gertners: Olha lá, beleza.
+
+701
+01:23:26.790 --> 01:23:30.349
+Kadu Gertners: Olha como o colégio, por exemplo,
+
+702
+01:23:31.270 --> 01:23:34.890
+Kadu Gertners: é Oaki. Aqui, ó, ele aparece
+
+703
+01:23:35.100 --> 01:23:39.909
+Kadu Gertners: para a tabela dois mil e vinte e para dois mil e trinta e cinco.
+
+704
+01:23:41.580 --> 01:23:45.200
+Kadu Gertners: Beleza maravilha.
+
+705
+01:23:45.870 --> 01:23:52.410
+Kadu Gertners: Ó, o Intersect é um comando de interseção.
+
+706
+01:23:52.820 --> 01:23:58.200
+Kadu Gertners: Quais são os valores que são em comum as duas tabelas.
+
+707
+01:23:58.770 --> 01:24:06.429
+Kadu Gertners: Quais são os valores que tem nas duas tabelas? Então, se você não quiser usar o Join. O Inner Join. Mas aí vai depender do caso. Tá?
+
+708
+01:24:06.640 --> 01:24:10.179
+Kadu Gertners: Vai dependendo do caso. Mas nesse exemplo,
+
+709
+01:24:10.320 --> 01:24:15.130
+Kadu Gertners: para pegar os valores em comum das duas tabelas. Podemos usar esse comando aqui.
+
+710
+01:24:15.270 --> 01:24:26.910
+Kadu Gertners: A interseção entre a tabela. Distrito dois mil e vinte e a Tabela, distrito dois mil e trinta e cinco a partir de todas as colunas. E vamos ordenar pela coluna Id.
+
+711
+01:24:27.340 --> 01:24:34.460
+Kadu Gertners: Vambora traz para cá e executa ó
+
+712
+01:24:35.200 --> 01:24:42.379
+Kadu Gertners: os valores que existem nas duas tabelas. Exatamente com esses números aqui. Um, dois e seis.
+
+713
+01:24:44.720 --> 01:24:56.380
+Kadu Gertners: Ok, bom, para finalizar, nós podemos pegar Cadu. Como é que eu vejo os valores a mais
+
+714
+01:24:56.570 --> 01:25:09.350
+Kadu Gertners: que existem na tabela. Distrito dois mil e vinte. Os valores a mais que existem em relação à tabela dois mil e trinta e cinco. Então você usa o except.
+
+715
+01:25:09.560 --> 01:25:26.329
+Kadu Gertners: Você vai fazer um Select de uma tabela, e vai tirar um excet. Vai tirar um menos, subtrair os valores em comum da outra tabela. E você com isso só vai mostrar os valores que só existem na tabela de cima.
+
+716
+01:25:26.510 --> 01:25:29.830
+Kadu Gertners: Nesse caso, da Distrito dois mil e vinte.
+
+717
+01:25:30.470 --> 01:25:37.919
+Kadu Gertners: Vamos fazer um teste para ver como é que fica ó, pegamos o comando, colocamos para cá.
+
+718
+01:25:38.650 --> 01:25:46.590
+Kadu Gertners: E quais são os valores que só existem na tabela. Distrito dois mil e vinte. Só o valor. O Id com o Id cinco
+
+719
+01:25:47.320 --> 01:25:59.659
+Kadu Gertners: cadu. Posso trocar a posição das tabelas para descobrir agora como aí é uma obrigatoriedade, tá? A tabela que está acima. Ela manda no comando.
+
+720
+01:26:00.100 --> 01:26:13.690
+Kadu Gertners: Então podemos inverter e botar a Distrito dois mil e trinta e cinco agora em cima para mostrar os valores a mais dela em relação à tabela. Distrito dois mil e vinte, podemos
+
+721
+01:26:14.040 --> 01:26:21.400
+Kadu Gertners: então, ó pega o comando, traz para cá e executa.
+
+722
+01:26:22.220 --> 01:26:28.960
+Kadu Gertners: Ó na tabela. Distrito dois mil e trinta e cinco. Existem os valores a mais
+
+723
+01:26:29.460 --> 01:26:33.399
+Kadu Gertners: três e quatro em relação à tabela. Distrito dois mil e vinte
+
+724
+01:26:39.730 --> 01:26:42.780
+Kadu Gertners: Opa, se eles botaram mais coisas aqui, peraí.
+
+725
+01:26:46.700 --> 01:26:56.759
+Kadu Gertners: O problema de adicionar uma constrente no alter é que pode dar problema com os dados resistentes, né, Gabriel Diniz? Sim, isso pode acontecer. Sim,
+
+726
+01:26:57.100 --> 01:26:59.930
+Kadu Gertners: dependendo do caso, pode dar problema. Sim,
+
+727
+01:27:01.140 --> 01:27:05.229
+Kadu Gertners: tá legal só para te afirmar o que você falou. Sim, pode dar problema.
+
+728
+01:27:05.340 --> 01:27:15.819
+Kadu Gertners: Você tem que se policiar. E tem que realmente ter certeza que as chaves, as constrentes criadas. Elas não vão te gerar esse problema.
+
+729
+01:27:16.330 --> 01:27:28.030
+Kadu Gertners: Você tem que ficar meio que analisando ou controlando isso lógico, o banco de dados vai te avisar isso e você vai poder tratar isso se for o caso.
+
+730
+01:27:28.720 --> 01:27:29.710
+Kadu Gertners: Tá bom,
+
+731
+01:27:31.280 --> 01:27:44.749
+Kadu Gertners: professor, se eu utilizar apenas o Using ao invés do On, poderia causar algum problema, cara, olha só. É interessante usar Pedro pingueiro a sintaxe de verdade como ela é.
+
+732
+01:27:45.130 --> 01:27:58.850
+Kadu Gertners: Eu aconselho usar o On porque de repente ele pode ter um comportamento inesperado. Mas se você seguir Pedro Pingueiro a sintaxe real. Você não vai ter dor de cabeça.
+
+733
+01:27:59.510 --> 01:28:00.749
+Kadu Gertners: Tá bom, amigo.
+
+734
+01:28:02.390 --> 01:28:12.370
+Kadu Gertners: Professor, eu preciso usar sempre o Id na criação das tabelas, ou posso usar o auto incremento nesse nosso caso específico. Cara, toma cuidado.
+
+735
+01:28:12.500 --> 01:28:16.489
+Kadu Gertners: O Id é o nome da coluna.
+
+736
+01:28:17.610 --> 01:28:18.830
+Kadu Gertners: Vamos devagar.
+
+737
+01:28:19.030 --> 01:28:29.189
+Kadu Gertners: O Id é o nome da coluna Mateus Auto Increment. É uma característica da coluna
+
+738
+01:28:29.580 --> 01:28:49.140
+Kadu Gertners: que você, nesse caso, vai colocar a característica de auto incrementar para a coluna Id. Mas você pode botar um auto incrementar para uma coluna código. Você poderia botar um auto incrementar para uma coluna de código de cliente também, por exemplo, não tem problema nenhum,
+
+739
+01:28:49.930 --> 01:28:55.730
+Kadu Gertners: beleza. Então, de novo, o Id Mateus é o nome da coluna.
+
+740
+01:28:56.020 --> 01:29:04.280
+Kadu Gertners: O auto incremento é uma característica da coluna independente do nome da coluna beleza.
+
+741
+01:29:04.450 --> 01:29:12.390
+Kadu Gertners: Ok, ok, show que você escreveu aqui. Maravilha, Pedro Pinheiro. Entendi, beleza, Pedro, que bom que você entendeu.
+
+742
+01:29:14.970 --> 01:29:27.060
+Kadu Gertners: Sem problema, Eduardo. Excelente noite para vocês, pessoal. Eu acabei aqui a material hoje. Vocês querem tirar mais alguma dúvida ou perguntar mais alguma coisa pessoal,
+
+743
+01:29:27.170 --> 01:29:37.530
+Kadu Gertners: senão nós ficamos por aqui. Eu vou desejar logicamente aí um excelente feriado fim de semana para vocês, galera e vai na minha.
+
+744
+01:29:37.730 --> 01:29:52.459
+Kadu Gertners: Vai estudando as matérias. Vocês viram que hoje eu falei bastante coisas diferentes. Assim é legal vocês de repente ouvirem de novo essa aula. Se vocês tiverem tempo para vocês
+
+745
+01:29:52.460 --> 01:30:05.760
+Kadu Gertners: consolidar em alguns conceitos e lógico, se vocês tiverem dúvidas, passa mensagem para mim no Whatsapp, passa mensagem no e mail. Passa a mensagem no infinite online.
+
+746
+01:30:06.310 --> 01:30:07.630
+Kadu Gertners: Beleza, galera.
+
+747
+01:30:07.780 --> 01:30:20.440
+Kadu Gertners: E aí na semana que vem vamos falar sobre o At de vocês aí direitinho. Tá bom. Vou passar o resto da matéria. E assim que der, eu vou finalizar aquela matéria também com vocês.
+
+748
+01:30:20.650 --> 01:30:29.400
+Kadu Gertners: Tá bom, pessoal, muito obrigado pela presença de vocês aqui hoje. Pela ajuda, como sempre na aula.
+
+749
+01:30:29.770 --> 01:30:37.700
+Kadu Gertners: Uma excelente noite para vocês e vamos nos falando, pessoal. Beijo no coração de vocês, tá? Valeu, galera. Obrigado. Valeu, Matheus.
+
+750
+01:30:38.520 --> 01:30:41.180
+Kadu Gertners: Valeu, Gabriel Diniz. Valeu, Alan.
+
+751
+01:30:42.450 --> 01:30:45.229
+Kadu Gertners: Valeu, Matheus Ramos. Excelente noite, irmão.
+
+752
+01:30:48.570 --> 01:30:50.709
+Kadu Gertners: Tchau, pessoal. Câmbio final.
+

@@ -465,8 +465,8 @@ await runLessonScraperStandalone();
 | `DOCUMENTS_URL` | URL raiz da área de documentos. |
 | `DOCUMENTS_OUTPUT_DIR` | Pasta de saída (default `downloads/documents` sob `projectRoot`). |
 | `DOCUMENTS_MAX_DEPTH` | Profundidade máxima de pastas (default 32). |
-| `DOCUMENTS_MAX_BYTES` | Limite por ficheiro (default 500 MiB). |
-| `DOCUMENTS_FETCH_TIMEOUT_MS` | Timeout do `fetch` (default 300000). |
+| `DOCUMENTS_MAX_BYTES` | Limite por ficheiro (default **20 GiB**). |
+| `DOCUMENTS_FETCH_TIMEOUT_MS` | Timeout do `fetch` por ficheiro (default **2 h**, em ms). |
 | `DOCUMENTS_IGNORE_MANIFEST` | `1` / `true` / `yes` — ignora manifest. |
 
 ### Exemplos copiáveis

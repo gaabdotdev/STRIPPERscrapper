@@ -44,6 +44,7 @@ jobs:
         env:
           CI: 'true'
           HEADLESS: 'true'
+          CAPTCHA_GATE: '0'
           # Código usa FACULDADE_USER (.env.example); USER_LOGIN mantém compat. com secrets antigos
           FACULDADE_USER: ${{ secrets.FACULDADE_USER || secrets.USER_LOGIN }}
           FACULDADE_PASS: ${{ secrets.FACULDADE_PASS }}
@@ -59,6 +60,7 @@ jobs:
         env:
           CI: 'true'
           HEADLESS: 'true'
+          CAPTCHA_GATE: '0'
           FACULDADE_USER: ${{ secrets.FACULDADE_USER || secrets.USER_LOGIN }}
           FACULDADE_PASS: ${{ secrets.FACULDADE_PASS }}
           CLASSES_URL: ${{ secrets.CLASSES_URL }}

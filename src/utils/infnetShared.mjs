@@ -8,6 +8,13 @@ import { fileURLToPath } from 'url';
 
 export const BASE_ORIGIN = 'https://infnet.online';
 
+/** @param {string} key @param {string} [fallback] */
+export function envTrim(key, fallback = '') {
+  const v = process.env[key];
+  if (v == null || v === '') return fallback;
+  return String(v).trim();
+}
+
 /**
  * Infere a URL BuddyPress `…/grupos/{slug}/documents/` a partir de qualquer URL do mesmo grupo
  * (ex. `CLASSES_URL` com `…/grupos/{slug}/infnet-ci-zoom-mettings/`).
@@ -277,6 +284,14 @@ export async function ensureAuthenticated(page, targetUrl, sessionPath, user, pa
   await gotoUrl(page, targetUrl, settleMs);
 
   if (page.url().includes('wp-login.php')) {
+    const title = await page.title();
+    const cloudflareBlock = /um momento|just a moment|attention required/i.test(title);
+    const hasLoginFields = await page.$('input#user_login, input[name="log"], input[type="email"]');
+    if (cloudflareBlock || !hasLoginFields) {
+      throw new Error(
+        '[LOGIN] Cloudflare/captcha activo ou sessão expirada. Corre `npm start -- --all` para autenticar no browser visível (captcha gate).'
+      );
+    }
     if (!user || !pass) {
       throw new Error('FACULDADE_USER / FACULDADE_PASS ausentes (.env)');
     }

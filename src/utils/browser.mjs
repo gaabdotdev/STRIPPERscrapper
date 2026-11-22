@@ -2,7 +2,15 @@
  * Arranque partilhado do Puppeteer (Chrome, headless, viewport).
  */
 import puppeteer from 'puppeteer';
-import { fileExists, detectSystemChrome, printChromeHelp } from './infnetShared.mjs';
+import path from 'path';
+import { fileExists, detectSystemChrome, printChromeHelp, projectRoot } from './infnetShared.mjs';
+
+/** @returns {string} */
+export function resolveBrowserProfileDir() {
+  const fromEnv = process.env.BROWSER_PROFILE_DIR?.trim();
+  if (fromEnv) return path.resolve(fromEnv);
+  return path.join(projectRoot, '.browser-profile');
+}
 
 /**
  * @param {{ headed?: boolean }} opts
@@ -22,15 +30,19 @@ export async function resolveExecutablePath() {
 }
 
 /**
- * @param {{ headed?: boolean; preferHeadlessUnlessHeaded?: boolean }} opts
+ * @param {{ headed?: boolean; preferHeadlessUnlessHeaded?: boolean; forceHeaded?: boolean; forceHeadless?: boolean; userDataDir?: string }} opts
  * @description Com `preferHeadlessUnlessHeaded`, ignora `HEADLESS=0` no .env (útil para workers em cluster).
  */
 export function buildLaunchOptions(opts = {}) {
   const headed = opts.headed ?? false;
   const preferHeadless = Boolean(opts.preferHeadlessUnlessHeaded);
-  const showBrowser = preferHeadless
-    ? headed
-    : headed || process.env.HEADLESS === '0';
+  const showBrowser = opts.forceHeaded
+    ? true
+    : opts.forceHeadless
+      ? false
+      : preferHeadless
+        ? headed
+        : headed || process.env.HEADLESS === '0';
   if (showBrowser) {
     console.log('[UI] Browser visível (use --headed ou HEADLESS=0 no .env)');
   }
@@ -44,7 +56,7 @@ export function buildLaunchOptions(opts = {}) {
 }
 
 /**
- * @param {{ headed?: boolean; preferHeadlessUnlessHeaded?: boolean }} opts
+ * @param {{ headed?: boolean; preferHeadlessUnlessHeaded?: boolean; forceHeaded?: boolean; forceHeadless?: boolean; userDataDir?: string }} opts
  * @returns {Promise<import('puppeteer').Browser>}
  */
 export async function launchBrowser(opts = {}) {
@@ -53,6 +65,7 @@ export async function launchBrowser(opts = {}) {
   try {
     return await puppeteer.launch({
       ...launchOpts,
+      ...(opts.userDataDir ? { userDataDir: opts.userDataDir } : {}),
       ...(executablePath ? { executablePath } : {}),
     });
   } catch (e) {

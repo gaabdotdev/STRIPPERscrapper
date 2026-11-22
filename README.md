@@ -68,12 +68,14 @@ O nome do repositório é um jogo de palavras com “strip” (extração) e “
 
    Mínimo típico: `FACULDADE_USER`, `FACULDADE_PASS`; opcionalmente `CLASSES_URL`, `DOCUMENTS_URL`, etc. (ver tabela abaixo).
 
-2. Instalar e correr (é obrigatório passar `--lessons`, `--docs` ou `--all`):
+2. Instalar dependências e correr (é obrigatório passar `--lessons`, `--docs` ou `--all`):
 
    ```bash
    npm install
-   npm start -- --lessons
+   npm start -- --all --workers 10
    ```
+
+   O projeto inclui `.npmrc` com `PUPPETEER_SKIP_DOWNLOAD=true` — usa o Chrome do sistema. Se `npm install` falhar, vê [Troubleshooting](#troubleshooting).
 
 3. Browser visível: `npm start -- --lessons --headed` ou `HEADLESS=0` no `.env`.
 
@@ -91,6 +93,36 @@ $env:HEADLESS="0"; npm run lessons -- --limit=2
 | `npm run all` | `node main.js --all` |
 | `npm run lessons` / `npm run stripper` | `node main.js --lessons` |
 | `npm run docs` / `npm run documents` | `node main.js --docs` |
+| `npm run extract:zips` | Só extrair `.zip` (sem scrape; útil manualmente) |
+| `npm run run:local` | Atalho: `npm ci` + `npm start` (mesmos flags) |
+
+### Pipeline (tudo num comando)
+
+Captcha → scrape → extrair ZIPs corre **dentro** do `main.js` quando incluis documentos (`--docs` ou `--all`):
+
+```bash
+npm start -- --all --workers 10
+```
+
+Só documentos:
+
+```bash
+npm start -- --docs --workers 10
+```
+
+Desactivar extração de ZIPs: `--no-extract-zips` ou `EXTRACT_ZIPS=0` no `.env`.
+
+Atalho com `npm ci` antes:
+
+```bash
+npm run run:local -- --all --workers 10
+```
+
+Extrair ZIPs já descarregados (sem scrape):
+
+```bash
+npm run extract:zips
+```
 
 `node main.js` sem `--lessons`, `--docs` ou `--all` mostra a ajuda do Commander e termina com código **1**.
 
@@ -158,8 +190,8 @@ Limites: RAM, CPU e rede escalam com o número de browsers; começar com **2–4
 | `DOCUMENTS_URL` | URL raiz da área de documentos |
 | `DOCUMENTS_OUTPUT_DIR` | Saída (default `downloads/documents` sob a raiz do projeto) |
 | `DOCUMENTS_MAX_DEPTH` | Profundidade máxima de pastas (default 32) |
-| `DOCUMENTS_MAX_BYTES` | Limite por ficheiro (default 500 MiB) |
-| `DOCUMENTS_FETCH_TIMEOUT_MS` | Timeout do `fetch` (default 300000) |
+| `DOCUMENTS_MAX_BYTES` | Limite por ficheiro (default **20 GiB**) |
+| `DOCUMENTS_FETCH_TIMEOUT_MS` | Timeout do `fetch` por ficheiro (default **2 h**, em ms) |
 | `DOCUMENTS_IGNORE_MANIFEST` | `1` / `true` / `yes` — ignora manifest |
 
 ## Visão do sistema
@@ -274,9 +306,20 @@ UI do Drive varia (iframe, idioma). O código percorre frames e vários rótulos
 </details>
 
 <details>
+<summary>Cloudflare / captcha / login bloqueado</summary>
+
+O Infnet usa **Cloudflare Turnstile** antes do login WordPress. Ao correr `npm start`, abre um **Chrome visível** (captcha gate) — completa o desafio e o login dentro de **2 minutos** (`CAPTCHA_WAIT_MS`, default 120000).
+
+- Cookies Cloudflare ficam em `.browser-profile/` (não commitar).
+- Sessão WordPress fica em `session.json`.
+- Se expirar: apaga `session.json` e volta a correr `npm start`.
+- Erro `Campos de login não encontrados` → normal enquanto o Cloudflare ainda não libertou a página de login; espera o browser ou aumenta `CAPTCHA_WAIT_MS`.
+</details>
+
+<details>
 <summary>Login falha com credenciais corretas</summary>
 
-MFA ou captchas não tratados pelo script. Apagar `session.json` e tentar com `--headed`.
+Verifica espaços no `.env` (sem espaço após `=`). MFA ou captcha extra: usa o browser visível do captcha gate. `FACULDADE_USER` e `FACULDADE_PASS` devem estar sem aspas nem espaços à volta.
 </details>
 
 <details>

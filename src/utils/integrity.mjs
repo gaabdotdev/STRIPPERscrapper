@@ -1,5 +1,13 @@
 import fs from 'fs/promises';
 
+/** Tolerância quando Content-Length do servidor vem subestimado (ex.: 815 vs 2437). */
+const DEFAULT_INTEGRITY_SIZE_MAX_RATIO = 10;
+
+function resolveIntegritySizeMaxRatio() {
+  const n = Number(process.env.INTEGRITY_SIZE_MAX_RATIO);
+  return Number.isFinite(n) && n >= 1 ? n : DEFAULT_INTEGRITY_SIZE_MAX_RATIO;
+}
+
 /**
  * Faz um sniff simples para HTML (respostas de login/permissão disfarçadas).
  * @param {Buffer} buf
@@ -20,7 +28,8 @@ function bufferLooksLikeHtml(buf) {
  * - deve existir e ser ficheiro
  * - size > 0
  * - não parecer HTML
- * - se `expectedBytes` fornecido, size deve bater (ou falha)
+ * - se `expectedBytes` fornecido, size deve bater ou estar dentro da tolerância
+ *   (Content-Length do servidor costuma vir subestimado em documentos .txt)
  *
  * @param {object} opts
  * @param {string} opts.filePath
@@ -34,7 +43,18 @@ export async function validateBinaryFile(opts) {
   if (!st.isFile()) throw new Error('integrity: destino não é ficheiro');
   if (st.size <= 0) throw new Error('integrity: ficheiro vazio');
   if (Number.isFinite(expectedBytes) && expectedBytes >= 0 && st.size !== expectedBytes) {
-    throw new Error(`integrity: tamanho ${st.size} != esperado ${expectedBytes}`);
+    const maxRatio = resolveIntegritySizeMaxRatio();
+    const maxAllowed = Math.max(expectedBytes, Math.ceil(expectedBytes * maxRatio));
+    if (st.size > maxAllowed) {
+      throw new Error(
+        `integrity: tamanho ${st.size} != esperado ${expectedBytes} (limite ${maxAllowed})`
+      );
+    }
+    if (st.size < expectedBytes) {
+      throw new Error(
+        `integrity: tamanho ${st.size} < esperado ${expectedBytes} (download incompleto)`
+      );
+    }
   }
 
   const fh = await fs.open(filePath, 'r');
